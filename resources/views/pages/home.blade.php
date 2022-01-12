@@ -1,0 +1,8 @@
+@extends('master')
+@section('body')
+    @include('pages.section.slider')
+    @include('pages.section.services')
+    @include('pages.section.testiominal')
+    @include('pages.section.blog')
+    @include('pages.section.clients')
+@stop

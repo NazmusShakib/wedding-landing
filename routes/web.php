@@ -13,6 +13,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/{page_url?}', 'PublicController@page')->name('page');
+Route::get('service/{id}/details/{slug}', 'PublicController@serviceDetails')->name('service.details');
+Route::get('package/{id}/details/{slug}', 'PublicController@packageDetails')->name('package.details');
+Route::get('portfolio/{id}/details/{slug}', 'PublicController@portfolioDetails')->name('portfolio.details');

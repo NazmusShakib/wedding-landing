@@ -11,7 +11,7 @@ return [
     | login page.
     |
     */
-    'name' => 'Laravel-admin',
+    'name' => 'Wedding Management',
 
     /*
     |--------------------------------------------------------------------------
@@ -22,7 +22,7 @@ return [
     | `img` tag, eg '<img src="http://logo-url" alt="Admin logo">'.
     |
     */
-    'logo' => '<b>Laravel</b> admin',
+    'logo' => '<b>Wedding</b> Management',
 
     /*
     |--------------------------------------------------------------------------
@@ -34,7 +34,7 @@ return [
     | '<img src="http://logo-url" alt="Admin logo">'.
     |
     */
-    'logo-mini' => '<b>La</b>',
+    'logo-mini' => '<b>Wedding</b>',
 
     /*
     |--------------------------------------------------------------------------
@@ -405,6 +405,43 @@ return [
     |
     */
     'extensions' => [
-
-    ],
+        'quill' => [
+            // If the value is set to false, this extension will be disabled
+            'enable' => true,
+            'config' => [
+                'modules' => [
+                    'syntax' => true,
+                    'toolbar' =>
+                        [
+                            ['size' => []],
+                            ['header' => []],
+                            'bold',
+                            'italic',
+                            'underline',
+                            'strike',
+                            ['script' => 'super'],
+                            ['script' => 'sub'],
+                            ['color' => []],
+                            ['background' => []],
+                            'blockquote',
+                            'code-block',
+                            ['list' => 'ordered'],
+                            ['list' => 'bullet'],
+                            ['indent' => '-1'],
+                            ['indent' => '+1'],
+                            'direction',
+                            ['align' => []],
+                            'link',
+                            'image',
+                            'video',
+                            'formula',
+                            'clean'
+                        ],
+                        // "htmlEditButton" => ["syntax" => true, "debug" => true]
+                ],
+                'theme' => 'snow',
+                'height' => '200px',
+            ]
+        ]
+    ]
 ];
