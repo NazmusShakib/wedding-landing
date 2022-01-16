@@ -16,4 +16,7 @@ Route::group([
     $router->resource('service-categories', ServiceCategoryController::class);
     $router->resource('packages', PackageController::class);
     $router->resource('portfolios', PortfolioController::class);
+    $router->resource('post-categories', PostCategoryController::class);
+    $router->resource('tags', TagController::class);
+    $router->resource('posts', PostController::class);
 });

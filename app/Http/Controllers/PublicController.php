@@ -5,6 +5,7 @@ use Illuminate\Http\Request;
 use App\Models\Service;
 use App\Models\Package;
 use App\Models\Portfolio;
+use App\Models\Post;
 
 class PublicController extends Controller
 {
@@ -42,5 +43,11 @@ class PublicController extends Controller
     {
         $portfolio = Portfolio::with('package')->find($id)->toArray();
         return view('pages.portfolioDetails', compact('portfolio'));
+    }
+
+    public function postDetails($id)
+    {
+        $post = Post::find($id);
+        return view('pages.postDetails', compact('post'));
     }
 }

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Jan 12, 2022 at 10:53 AM
+-- Generation Time: Jan 16, 2022 at 07:17 AM
 -- Server version: 5.7.33
 -- PHP Version: 7.4.9
 
@@ -88,7 +88,11 @@ INSERT INTO `admin_menu` (`id`, `parent_id`, `order`, `title`, `icon`, `uri`, `p
 (13, 10, 11, 'Category', 'fa-briefcase', 'service-categories', NULL, '2022-01-11 06:10:35', '2022-01-11 06:12:06'),
 (14, 10, 12, 'Services', 'fa-paper-plane-o', 'services', NULL, '2022-01-11 06:11:31', '2022-01-11 06:12:06'),
 (15, 0, 13, 'Packages', 'fa-check-square-o', 'packages', NULL, '2022-01-11 22:22:52', '2022-01-11 22:23:12'),
-(16, 0, 14, 'Portfolios', 'fa-image', 'portfolios', NULL, '2022-01-11 23:41:39', '2022-01-11 23:41:44');
+(16, 0, 14, 'Portfolios', 'fa-image', 'portfolios', NULL, '2022-01-11 23:41:39', '2022-01-11 23:41:44'),
+(17, 0, 15, 'Blog', 'fa-rss', 'posts', NULL, '2022-01-15 22:45:11', '2022-01-15 22:47:30'),
+(18, 17, 16, 'Category', 'fa-briefcase', 'post-categories', NULL, '2022-01-15 22:45:55', '2022-01-15 22:47:31'),
+(19, 17, 17, 'Tags', 'fa-tags', 'tags', NULL, '2022-01-15 22:46:40', '2022-01-15 22:47:31'),
+(20, 17, 18, 'Posts', 'fa-rss-square', 'posts', NULL, '2022-01-15 22:47:14', '2022-01-15 22:47:31');
 
 -- --------------------------------------------------------
 
@@ -756,7 +760,143 @@ INSERT INTO `admin_operation_log` (`id`, `user_id`, `path`, `method`, `ip`, `inp
 (640, 1, 'admin/portfolios', 'GET', '127.0.0.1', '[]', '2022-01-12 00:59:43', '2022-01-12 00:59:43'),
 (641, 1, 'admin/portfolios/1/edit', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2022-01-12 04:19:27', '2022-01-12 04:19:27'),
 (642, 1, 'admin/portfolios/1', 'PUT', '127.0.0.1', '{\"package_id\":\"2\",\"name\":\"Eleanor & Stefano\",\"event_planner\":\"Rachel Starletta\",\"photographer_name\":\"Janet Lewis\",\"location\":\"Lakewood WA, USA\",\"description\":\"Quality vestibulum mollis accumsan ultricies. Sed urna velit, maximus eu tellus sit amet, condimentum dictum erat. Sed dolor ipsum, luctus quis est eu, vestibulum tincidunt est. Donec egestas aliquet nunc, ac egestas sapien fermentum in. Sed volutpat ac mi faucibus convallis. Praesent facilisis lobortis tellus. Donec laoreet, erat in sagittis dictum, enim enim dignissim sapien.\",\"videos\":{\"values\":[\"https:\\/\\/www.youtube.com\\/watch?v=mMw1hseXB3k\",\"https:\\/\\/www.youtube.com\\/watch?v=mMw1hseXB3k\",\"https:\\/\\/www.youtube.com\\/watch?v=mMw1hseXB3k\",\"https:\\/\\/www.youtube.com\\/watch?v=mMw1hseXB3k\"]},\"_token\":\"pIKcOAg2W9vmVmYIFgTJW1n7i99VALUcLyTdtX47\",\"_method\":\"PUT\",\"_previous_\":\"http:\\/\\/wedding.test\\/admin\\/portfolios\"}', '2022-01-12 04:20:09', '2022-01-12 04:20:09'),
-(643, 1, 'admin/portfolios', 'GET', '127.0.0.1', '[]', '2022-01-12 04:20:09', '2022-01-12 04:20:09');
+(643, 1, 'admin/portfolios', 'GET', '127.0.0.1', '[]', '2022-01-12 04:20:09', '2022-01-12 04:20:09'),
+(644, 1, 'admin', 'GET', '127.0.0.1', '[]', '2022-01-12 23:54:17', '2022-01-12 23:54:17'),
+(645, 1, 'admin/auth/menu', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2022-01-12 23:54:24', '2022-01-12 23:54:24'),
+(646, 1, 'admin/auth/roles', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2022-01-12 23:54:29', '2022-01-12 23:54:29'),
+(647, 1, 'admin/auth/permissions', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2022-01-12 23:54:32', '2022-01-12 23:54:32'),
+(648, 1, 'admin/auth/roles', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2022-01-12 23:54:34', '2022-01-12 23:54:34'),
+(649, 1, 'admin/packages', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2022-01-12 23:54:37', '2022-01-12 23:54:37'),
+(650, 1, 'admin/portfolios', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2022-01-12 23:54:38', '2022-01-12 23:54:38'),
+(651, 1, 'admin', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2022-01-12 23:54:41', '2022-01-12 23:54:41'),
+(652, 1, 'admin/auth/permissions', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2022-01-12 23:54:43', '2022-01-12 23:54:43'),
+(653, 1, 'admin/auth/menu', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2022-01-12 23:54:44', '2022-01-12 23:54:44'),
+(654, 1, 'admin/auth/menu', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2022-01-12 23:54:47', '2022-01-12 23:54:47'),
+(655, 1, 'admin/auth/permissions', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2022-01-12 23:54:47', '2022-01-12 23:54:47'),
+(656, 1, 'admin', 'GET', '127.0.0.1', '[]', '2022-01-15 07:09:52', '2022-01-15 07:09:52'),
+(657, 1, 'admin/portfolios', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2022-01-15 07:09:58', '2022-01-15 07:09:58'),
+(658, 1, 'admin/auth/menu', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2022-01-15 07:10:05', '2022-01-15 07:10:05'),
+(659, 1, 'admin', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2022-01-15 07:11:08', '2022-01-15 07:11:08'),
+(660, 1, 'admin/auth/logout', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2022-01-15 07:11:15', '2022-01-15 07:11:15'),
+(661, 1, 'admin', 'GET', '127.0.0.1', '[]', '2022-01-15 22:43:20', '2022-01-15 22:43:20'),
+(662, 1, 'admin/auth/menu', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2022-01-15 22:43:24', '2022-01-15 22:43:24'),
+(663, 1, 'admin/auth/menu', 'POST', '127.0.0.1', '{\"parent_id\":\"0\",\"title\":\"Posts\",\"icon\":\"fa-rss\",\"uri\":\"posts\",\"roles\":[null],\"permission\":null,\"_token\":\"tE8RPTmVZresZli5AaDt234PytdgevIYvbZj5YhV\"}', '2022-01-15 22:45:11', '2022-01-15 22:45:11'),
+(664, 1, 'admin/auth/menu', 'GET', '127.0.0.1', '[]', '2022-01-15 22:45:11', '2022-01-15 22:45:11'),
+(665, 1, 'admin/auth/menu', 'POST', '127.0.0.1', '{\"parent_id\":\"17\",\"title\":\"Category\",\"icon\":\"fa-briefcase\",\"uri\":\"post-categories\",\"roles\":[null],\"permission\":null,\"_token\":\"tE8RPTmVZresZli5AaDt234PytdgevIYvbZj5YhV\"}', '2022-01-15 22:45:55', '2022-01-15 22:45:55'),
+(666, 1, 'admin/auth/menu', 'GET', '127.0.0.1', '[]', '2022-01-15 22:45:56', '2022-01-15 22:45:56'),
+(667, 1, 'admin/auth/menu', 'POST', '127.0.0.1', '{\"parent_id\":\"17\",\"title\":\"Tags\",\"icon\":\"fa-tags\",\"uri\":\"tags\",\"roles\":[null],\"permission\":null,\"_token\":\"tE8RPTmVZresZli5AaDt234PytdgevIYvbZj5YhV\"}', '2022-01-15 22:46:40', '2022-01-15 22:46:40'),
+(668, 1, 'admin/auth/menu', 'GET', '127.0.0.1', '[]', '2022-01-15 22:46:40', '2022-01-15 22:46:40'),
+(669, 1, 'admin/auth/menu', 'POST', '127.0.0.1', '{\"parent_id\":\"17\",\"title\":\"Posts\",\"icon\":\"fa-rss-square\",\"uri\":\"posts\",\"roles\":[null],\"permission\":null,\"_token\":\"tE8RPTmVZresZli5AaDt234PytdgevIYvbZj5YhV\"}', '2022-01-15 22:47:14', '2022-01-15 22:47:14'),
+(670, 1, 'admin/auth/menu', 'GET', '127.0.0.1', '[]', '2022-01-15 22:47:14', '2022-01-15 22:47:14'),
+(671, 1, 'admin/auth/menu/17/edit', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2022-01-15 22:47:16', '2022-01-15 22:47:16'),
+(672, 1, 'admin/auth/menu/17', 'PUT', '127.0.0.1', '{\"parent_id\":\"0\",\"title\":\"Blog\",\"icon\":\"fa-rss\",\"uri\":\"posts\",\"roles\":[null],\"permission\":null,\"_token\":\"tE8RPTmVZresZli5AaDt234PytdgevIYvbZj5YhV\",\"_method\":\"PUT\",\"_previous_\":\"http:\\/\\/wedding.test\\/admin\\/auth\\/menu\"}', '2022-01-15 22:47:22', '2022-01-15 22:47:22'),
+(673, 1, 'admin/auth/menu', 'GET', '127.0.0.1', '[]', '2022-01-15 22:47:22', '2022-01-15 22:47:22'),
+(674, 1, 'admin/auth/menu', 'POST', '127.0.0.1', '{\"_token\":\"tE8RPTmVZresZli5AaDt234PytdgevIYvbZj5YhV\",\"_order\":\"[{\\\"id\\\":1},{\\\"id\\\":2,\\\"children\\\":[{\\\"id\\\":3},{\\\"id\\\":4},{\\\"id\\\":5},{\\\"id\\\":6},{\\\"id\\\":7}]},{\\\"id\\\":8},{\\\"id\\\":9},{\\\"id\\\":10,\\\"children\\\":[{\\\"id\\\":13},{\\\"id\\\":14}]},{\\\"id\\\":15},{\\\"id\\\":16},{\\\"id\\\":17,\\\"children\\\":[{\\\"id\\\":18},{\\\"id\\\":19},{\\\"id\\\":20}]}]\"}', '2022-01-15 22:47:30', '2022-01-15 22:47:30'),
+(675, 1, 'admin/auth/menu', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2022-01-15 22:47:31', '2022-01-15 22:47:31'),
+(676, 1, 'admin/auth/menu', 'POST', '127.0.0.1', '{\"_token\":\"tE8RPTmVZresZli5AaDt234PytdgevIYvbZj5YhV\",\"_order\":\"[{\\\"id\\\":1},{\\\"id\\\":2,\\\"children\\\":[{\\\"id\\\":3},{\\\"id\\\":4},{\\\"id\\\":5},{\\\"id\\\":6},{\\\"id\\\":7}]},{\\\"id\\\":8},{\\\"id\\\":9},{\\\"id\\\":10,\\\"children\\\":[{\\\"id\\\":13},{\\\"id\\\":14}]},{\\\"id\\\":15},{\\\"id\\\":16},{\\\"id\\\":17,\\\"children\\\":[{\\\"id\\\":18},{\\\"id\\\":19},{\\\"id\\\":20}]}]\"}', '2022-01-15 22:47:33', '2022-01-15 22:47:33'),
+(677, 1, 'admin/auth/menu', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2022-01-15 22:47:33', '2022-01-15 22:47:33'),
+(678, 1, 'admin/auth/menu', 'GET', '127.0.0.1', '[]', '2022-01-15 22:47:35', '2022-01-15 22:47:35'),
+(679, 1, 'admin/post-categories', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2022-01-15 22:47:42', '2022-01-15 22:47:42'),
+(680, 1, 'admin/post-categories/create', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2022-01-15 22:47:44', '2022-01-15 22:47:44'),
+(681, 1, 'admin/post-categories/create', 'GET', '127.0.0.1', '[]', '2022-01-15 22:47:58', '2022-01-15 22:47:58'),
+(682, 1, 'admin/post-categories', 'POST', '127.0.0.1', '{\"name\":\"Wedding\",\"_token\":\"tE8RPTmVZresZli5AaDt234PytdgevIYvbZj5YhV\"}', '2022-01-15 22:48:04', '2022-01-15 22:48:04'),
+(683, 1, 'admin/post-categories', 'GET', '127.0.0.1', '[]', '2022-01-15 22:48:04', '2022-01-15 22:48:04'),
+(684, 1, 'admin/post-categories', 'GET', '127.0.0.1', '[]', '2022-01-15 22:48:48', '2022-01-15 22:48:48'),
+(685, 1, 'admin/post-categories', 'GET', '127.0.0.1', '[]', '2022-01-15 22:49:25', '2022-01-15 22:49:25'),
+(686, 1, 'admin/post-categories/create', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2022-01-15 22:49:27', '2022-01-15 22:49:27'),
+(687, 1, 'admin/post-categories', 'POST', '127.0.0.1', '{\"name\":\"Wedding\",\"_token\":\"tE8RPTmVZresZli5AaDt234PytdgevIYvbZj5YhV\",\"_previous_\":\"http:\\/\\/wedding.test\\/admin\\/post-categories\"}', '2022-01-15 22:49:33', '2022-01-15 22:49:33'),
+(688, 1, 'admin/post-categories/create', 'GET', '127.0.0.1', '[]', '2022-01-15 22:49:33', '2022-01-15 22:49:33'),
+(689, 1, 'admin/post-categories/create', 'GET', '127.0.0.1', '[]', '2022-01-15 22:49:38', '2022-01-15 22:49:38'),
+(690, 1, 'admin/post-categories', 'POST', '127.0.0.1', '{\"name\":\"Monthly\",\"_token\":\"tE8RPTmVZresZli5AaDt234PytdgevIYvbZj5YhV\"}', '2022-01-15 22:49:41', '2022-01-15 22:49:41'),
+(691, 1, 'admin/post-categories', 'GET', '127.0.0.1', '[]', '2022-01-15 22:49:42', '2022-01-15 22:49:42'),
+(692, 1, 'admin/_handle_action_', 'POST', '127.0.0.1', '{\"_key\":\"3\",\"_model\":\"App_Models_PostCategory\",\"_token\":\"tE8RPTmVZresZli5AaDt234PytdgevIYvbZj5YhV\",\"_action\":\"Encore_Admin_Grid_Actions_Delete\",\"_input\":\"true\"}', '2022-01-15 22:49:47', '2022-01-15 22:49:47'),
+(693, 1, 'admin/post-categories', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2022-01-15 22:49:47', '2022-01-15 22:49:47'),
+(694, 1, 'admin/post-categories/1/edit', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2022-01-15 22:50:45', '2022-01-15 22:50:45'),
+(695, 1, 'admin/post-categories/1', 'PUT', '127.0.0.1', '{\"name\":\"Wedding\",\"_token\":\"tE8RPTmVZresZli5AaDt234PytdgevIYvbZj5YhV\",\"_method\":\"PUT\",\"_previous_\":\"http:\\/\\/wedding.test\\/admin\\/post-categories\"}', '2022-01-15 22:50:47', '2022-01-15 22:50:47'),
+(696, 1, 'admin/post-categories', 'GET', '127.0.0.1', '[]', '2022-01-15 22:50:48', '2022-01-15 22:50:48'),
+(697, 1, 'admin/tags', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2022-01-15 22:50:57', '2022-01-15 22:50:57'),
+(698, 1, 'admin/tags/create', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2022-01-15 22:50:59', '2022-01-15 22:50:59'),
+(699, 1, 'admin/tags', 'POST', '127.0.0.1', '{\"name\":\"Wedding\",\"_token\":\"tE8RPTmVZresZli5AaDt234PytdgevIYvbZj5YhV\",\"_previous_\":\"http:\\/\\/wedding.test\\/admin\\/tags\"}', '2022-01-15 22:51:22', '2022-01-15 22:51:22'),
+(700, 1, 'admin/tags', 'GET', '127.0.0.1', '[]', '2022-01-15 22:51:23', '2022-01-15 22:51:23'),
+(701, 1, 'admin/tags', 'GET', '127.0.0.1', '[]', '2022-01-15 22:51:29', '2022-01-15 22:51:29'),
+(702, 1, 'admin/tags/1/edit', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2022-01-15 22:51:33', '2022-01-15 22:51:33'),
+(703, 1, 'admin/tags/1', 'PUT', '127.0.0.1', '{\"name\":\"Wedding\",\"_token\":\"tE8RPTmVZresZli5AaDt234PytdgevIYvbZj5YhV\",\"_method\":\"PUT\",\"_previous_\":\"http:\\/\\/wedding.test\\/admin\\/tags\"}', '2022-01-15 22:51:35', '2022-01-15 22:51:35'),
+(704, 1, 'admin/tags', 'GET', '127.0.0.1', '[]', '2022-01-15 22:51:35', '2022-01-15 22:51:35'),
+(705, 1, 'admin/posts', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2022-01-15 22:51:39', '2022-01-15 22:51:39'),
+(706, 1, 'admin/posts', 'GET', '127.0.0.1', '[]', '2022-01-15 22:53:04', '2022-01-15 22:53:04'),
+(707, 1, 'admin/posts/create', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2022-01-15 22:55:53', '2022-01-15 22:55:53'),
+(708, 1, 'admin/posts', 'POST', '127.0.0.1', '{\"post_category_id\":\"1\",\"tags\":[\"1\",null],\"title\":\"wfwerwer\",\"body\":\"<p>werwer<\\/p>\",\"_token\":\"tE8RPTmVZresZli5AaDt234PytdgevIYvbZj5YhV\",\"_previous_\":\"http:\\/\\/wedding.test\\/admin\\/posts\"}', '2022-01-15 22:56:54', '2022-01-15 22:56:54'),
+(709, 1, 'admin/posts', 'GET', '127.0.0.1', '[]', '2022-01-15 22:56:54', '2022-01-15 22:56:54'),
+(710, 1, 'admin/posts/1/edit', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2022-01-15 22:56:59', '2022-01-15 22:56:59'),
+(711, 1, 'admin/posts/1', 'PUT', '127.0.0.1', '{\"post_category_id\":\"1\",\"tags\":[\"1\",null],\"title\":\"wfwerwer\",\"body\":\"<p>werwer<\\/p>\",\"_token\":\"tE8RPTmVZresZli5AaDt234PytdgevIYvbZj5YhV\",\"_method\":\"PUT\",\"_previous_\":\"http:\\/\\/wedding.test\\/admin\\/posts\"}', '2022-01-15 22:57:02', '2022-01-15 22:57:02'),
+(712, 1, 'admin/posts', 'GET', '127.0.0.1', '[]', '2022-01-15 22:57:02', '2022-01-15 22:57:02'),
+(713, 1, 'admin/posts', 'GET', '127.0.0.1', '[]', '2022-01-15 22:57:47', '2022-01-15 22:57:47'),
+(714, 1, 'admin/posts', 'GET', '127.0.0.1', '[]', '2022-01-15 23:00:18', '2022-01-15 23:00:18'),
+(715, 1, 'admin/posts', 'GET', '127.0.0.1', '[]', '2022-01-15 23:01:39', '2022-01-15 23:01:39'),
+(716, 1, 'admin/posts', 'GET', '127.0.0.1', '[]', '2022-01-15 23:02:20', '2022-01-15 23:02:20'),
+(717, 1, 'admin/posts', 'GET', '127.0.0.1', '[]', '2022-01-15 23:03:48', '2022-01-15 23:03:48'),
+(718, 1, 'admin/posts', 'GET', '127.0.0.1', '[]', '2022-01-15 23:06:29', '2022-01-15 23:06:29'),
+(719, 1, 'admin/posts', 'GET', '127.0.0.1', '[]', '2022-01-15 23:06:40', '2022-01-15 23:06:40'),
+(720, 1, 'admin/posts', 'GET', '127.0.0.1', '[]', '2022-01-15 23:06:53', '2022-01-15 23:06:53'),
+(721, 1, 'admin/tags', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2022-01-15 23:06:57', '2022-01-15 23:06:57'),
+(722, 1, 'admin/tags/create', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2022-01-15 23:06:59', '2022-01-15 23:06:59'),
+(723, 1, 'admin/tags/create', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2022-01-15 23:06:59', '2022-01-15 23:06:59'),
+(724, 1, 'admin/tags', 'POST', '127.0.0.1', '{\"name\":\"Ecomerce\",\"_token\":\"tE8RPTmVZresZli5AaDt234PytdgevIYvbZj5YhV\"}', '2022-01-15 23:07:03', '2022-01-15 23:07:03'),
+(725, 1, 'admin/tags', 'GET', '127.0.0.1', '[]', '2022-01-15 23:07:03', '2022-01-15 23:07:03'),
+(726, 1, 'admin/posts', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2022-01-15 23:07:06', '2022-01-15 23:07:06'),
+(727, 1, 'admin/posts/1/edit', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2022-01-15 23:07:09', '2022-01-15 23:07:09'),
+(728, 1, 'admin/posts/1', 'PUT', '127.0.0.1', '{\"post_category_id\":\"1\",\"tags\":[\"1\",\"2\",null],\"title\":\"wfwerwer\",\"body\":\"<p>werwer<\\/p>\",\"_token\":\"tE8RPTmVZresZli5AaDt234PytdgevIYvbZj5YhV\",\"_method\":\"PUT\",\"_previous_\":\"http:\\/\\/wedding.test\\/admin\\/posts\"}', '2022-01-15 23:07:13', '2022-01-15 23:07:13'),
+(729, 1, 'admin/posts', 'GET', '127.0.0.1', '[]', '2022-01-15 23:07:13', '2022-01-15 23:07:13'),
+(730, 1, 'admin/posts', 'GET', '127.0.0.1', '[]', '2022-01-15 23:07:16', '2022-01-15 23:07:16'),
+(731, 1, 'admin/posts', 'GET', '127.0.0.1', '[]', '2022-01-15 23:08:21', '2022-01-15 23:08:21'),
+(732, 1, 'admin/posts', 'GET', '127.0.0.1', '[]', '2022-01-15 23:08:35', '2022-01-15 23:08:35'),
+(733, 1, 'admin/posts', 'GET', '127.0.0.1', '[]', '2022-01-15 23:08:55', '2022-01-15 23:08:55'),
+(734, 1, 'admin/posts', 'GET', '127.0.0.1', '[]', '2022-01-15 23:08:58', '2022-01-15 23:08:58'),
+(735, 1, 'admin/posts', 'GET', '127.0.0.1', '[]', '2022-01-15 23:09:20', '2022-01-15 23:09:20'),
+(736, 1, 'admin/tags', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2022-01-15 23:09:27', '2022-01-15 23:09:27'),
+(737, 1, 'admin/post-categories', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2022-01-15 23:09:28', '2022-01-15 23:09:28'),
+(738, 1, 'admin/tags', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2022-01-15 23:09:30', '2022-01-15 23:09:30'),
+(739, 1, 'admin/posts', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2022-01-15 23:09:31', '2022-01-15 23:09:31'),
+(740, 1, 'admin/posts/create', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2022-01-15 23:20:19', '2022-01-15 23:20:19'),
+(741, 1, 'admin/posts', 'POST', '127.0.0.1', '{\"post_category_id\":null,\"tags\":[null],\"title\":null,\"body\":\"<p><br><\\/p>\",\"_token\":\"tE8RPTmVZresZli5AaDt234PytdgevIYvbZj5YhV\",\"_previous_\":\"http:\\/\\/wedding.test\\/admin\\/posts\"}', '2022-01-15 23:20:36', '2022-01-15 23:20:36'),
+(742, 1, 'admin/posts/create', 'GET', '127.0.0.1', '[]', '2022-01-15 23:20:36', '2022-01-15 23:20:36'),
+(743, 1, 'admin/posts/create', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2022-01-15 23:20:42', '2022-01-15 23:20:42'),
+(744, 1, 'admin/posts', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2022-01-15 23:20:43', '2022-01-15 23:20:43'),
+(745, 1, 'admin/posts/1/edit', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2022-01-15 23:20:46', '2022-01-15 23:20:46'),
+(746, 1, 'admin/posts/1', 'PUT', '127.0.0.1', '{\"post_category_id\":\"1\",\"tags\":[\"1\",\"2\",null],\"title\":\"wfwerwer\",\"body\":\"<p>werwer<\\/p>\",\"_token\":\"tE8RPTmVZresZli5AaDt234PytdgevIYvbZj5YhV\",\"_method\":\"PUT\",\"_previous_\":\"http:\\/\\/wedding.test\\/admin\\/posts\"}', '2022-01-15 23:20:48', '2022-01-15 23:20:48'),
+(747, 1, 'admin/posts/1/edit', 'GET', '127.0.0.1', '[]', '2022-01-15 23:20:48', '2022-01-15 23:20:48'),
+(748, 1, 'admin/posts/1', 'PUT', '127.0.0.1', '{\"post_category_id\":\"1\",\"tags\":[\"1\",\"2\",null],\"title\":\"wfwerwer\",\"body\":\"<p>werwer<\\/p>\",\"_token\":\"tE8RPTmVZresZli5AaDt234PytdgevIYvbZj5YhV\",\"_method\":\"PUT\"}', '2022-01-15 23:21:17', '2022-01-15 23:21:17'),
+(749, 1, 'admin/posts', 'GET', '127.0.0.1', '[]', '2022-01-15 23:21:17', '2022-01-15 23:21:17'),
+(750, 1, 'admin/post-categories', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2022-01-15 23:22:03', '2022-01-15 23:22:03'),
+(751, 1, 'admin/post-categories/create', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2022-01-15 23:22:05', '2022-01-15 23:22:05'),
+(752, 1, 'admin/post-categories', 'POST', '127.0.0.1', '{\"name\":\"Wedding\",\"_token\":\"tE8RPTmVZresZli5AaDt234PytdgevIYvbZj5YhV\",\"_previous_\":\"http:\\/\\/wedding.test\\/admin\\/post-categories\"}', '2022-01-15 23:22:07', '2022-01-15 23:22:07'),
+(753, 1, 'admin/post-categories/create', 'GET', '127.0.0.1', '[]', '2022-01-15 23:22:07', '2022-01-15 23:22:07'),
+(754, 1, 'admin/post-categories', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2022-01-15 23:22:09', '2022-01-15 23:22:09'),
+(755, 1, 'admin/post-categories/1/edit', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2022-01-15 23:22:12', '2022-01-15 23:22:12'),
+(756, 1, 'admin/post-categories/1', 'PUT', '127.0.0.1', '{\"name\":\"Wedding\",\"_token\":\"tE8RPTmVZresZli5AaDt234PytdgevIYvbZj5YhV\",\"_method\":\"PUT\",\"_previous_\":\"http:\\/\\/wedding.test\\/admin\\/post-categories\"}', '2022-01-15 23:22:14', '2022-01-15 23:22:14'),
+(757, 1, 'admin/post-categories', 'GET', '127.0.0.1', '[]', '2022-01-15 23:22:14', '2022-01-15 23:22:14'),
+(758, 1, 'admin/tags', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2022-01-15 23:22:16', '2022-01-15 23:22:16'),
+(759, 1, 'admin/tags/create', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2022-01-15 23:22:17', '2022-01-15 23:22:17'),
+(760, 1, 'admin/tags', 'POST', '127.0.0.1', '{\"name\":\"Wedding\",\"_token\":\"tE8RPTmVZresZli5AaDt234PytdgevIYvbZj5YhV\",\"_previous_\":\"http:\\/\\/wedding.test\\/admin\\/tags\"}', '2022-01-15 23:22:20', '2022-01-15 23:22:20'),
+(761, 1, 'admin/tags/create', 'GET', '127.0.0.1', '[]', '2022-01-15 23:22:20', '2022-01-15 23:22:20'),
+(762, 1, 'admin/tags', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2022-01-15 23:22:22', '2022-01-15 23:22:22'),
+(763, 1, 'admin/tags/1/edit', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2022-01-15 23:22:27', '2022-01-15 23:22:27'),
+(764, 1, 'admin/tags/1', 'PUT', '127.0.0.1', '{\"name\":\"Wedding\",\"_token\":\"tE8RPTmVZresZli5AaDt234PytdgevIYvbZj5YhV\",\"_method\":\"PUT\",\"_previous_\":\"http:\\/\\/wedding.test\\/admin\\/tags\"}', '2022-01-15 23:22:28', '2022-01-15 23:22:28'),
+(765, 1, 'admin/tags', 'GET', '127.0.0.1', '[]', '2022-01-15 23:22:28', '2022-01-15 23:22:28'),
+(766, 1, 'admin/posts', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2022-01-15 23:22:57', '2022-01-15 23:22:57'),
+(767, 1, 'admin/posts', 'GET', '127.0.0.1', '[]', '2022-01-15 23:23:54', '2022-01-15 23:23:54'),
+(768, 1, 'admin/tags', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2022-01-15 23:24:01', '2022-01-15 23:24:01'),
+(769, 1, 'admin/posts', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2022-01-15 23:24:03', '2022-01-15 23:24:03'),
+(770, 1, 'admin/auth/menu', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2022-01-15 23:25:31', '2022-01-15 23:25:31'),
+(771, 1, 'admin', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2022-01-15 23:25:33', '2022-01-15 23:25:33'),
+(772, 1, 'admin/posts', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2022-01-15 23:48:38', '2022-01-15 23:48:38'),
+(773, 1, 'admin/posts/create', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2022-01-15 23:48:39', '2022-01-15 23:48:39'),
+(774, 1, 'admin/posts', 'POST', '127.0.0.1', '{\"post_category_id\":\"1\",\"tags\":[\"1\",null],\"title\":\"ewwe\",\"body\":\"<p>wewewe<\\/p>\",\"_token\":\"tE8RPTmVZresZli5AaDt234PytdgevIYvbZj5YhV\",\"_previous_\":\"http:\\/\\/wedding.test\\/admin\\/posts\"}', '2022-01-15 23:48:44', '2022-01-15 23:48:44'),
+(775, 1, 'admin/posts', 'GET', '127.0.0.1', '[]', '2022-01-15 23:48:45', '2022-01-15 23:48:45'),
+(776, 1, 'admin/posts/2/edit', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2022-01-15 23:48:50', '2022-01-15 23:48:50'),
+(777, 1, 'admin/posts/2', 'PUT', '127.0.0.1', '{\"post_category_id\":\"1\",\"tags\":[\"1\",null],\"title\":\"ewwe\",\"body\":\"<p>wewewe<\\/p>\",\"_token\":\"tE8RPTmVZresZli5AaDt234PytdgevIYvbZj5YhV\",\"_method\":\"PUT\",\"_previous_\":\"http:\\/\\/wedding.test\\/admin\\/posts\"}', '2022-01-15 23:48:55', '2022-01-15 23:48:55'),
+(778, 1, 'admin/posts', 'GET', '127.0.0.1', '[]', '2022-01-15 23:48:55', '2022-01-15 23:48:55'),
+(779, 1, 'admin', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2022-01-16 01:17:32', '2022-01-16 01:17:32');
 
 -- --------------------------------------------------------
 
@@ -889,7 +1029,7 @@ CREATE TABLE `admin_users` (
 --
 
 INSERT INTO `admin_users` (`id`, `username`, `password`, `name`, `avatar`, `remember_token`, `created_at`, `updated_at`) VALUES
-(1, 'admin', '$2y$10$0MbT4TuI7GZpdXRSV7v5wOotaHGAAGqzor3/H8hTqk56vuW6ikzaq', 'Administrator', NULL, 'XfAapNmLoOrQuKi36kLoziKjgvopB4Wn0dzymPPit3aAQR63isgU8phSbeJe', '2022-01-09 00:34:06', '2022-01-09 00:34:06');
+(1, 'admin', '$2y$10$0MbT4TuI7GZpdXRSV7v5wOotaHGAAGqzor3/H8hTqk56vuW6ikzaq', 'Administrator', NULL, 'p3LYIY8PSvtsqg97ivK6qAsr3GnG3A7ZiqGIZNffWDu3I4Hne4IwFCdIkjYM', '2022-01-09 00:34:06', '2022-01-09 00:34:06');
 
 -- --------------------------------------------------------
 
@@ -947,7 +1087,11 @@ INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
 (13, '2022_01_11_120601_create_service_categories_table', 4),
 (14, '2022_01_11_131703_create_services_table', 4),
 (15, '2022_01_11_131713_create_packages_table', 5),
-(16, '2022_01_12_053912_create_portfolios_table', 6);
+(16, '2022_01_12_053912_create_portfolios_table', 6),
+(17, '2022_01_16_041413_create_post_categories_table', 7),
+(18, '2022_01_16_041722_create_tags_table', 7),
+(19, '2022_01_16_041732_create_posts_table', 7),
+(20, '2022_01_16_043341_create_post_tag_table', 7);
 
 -- --------------------------------------------------------
 
@@ -1036,6 +1180,73 @@ INSERT INTO `portfolios` (`id`, `package_id`, `name`, `event_planner`, `photogra
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `posts`
+--
+
+CREATE TABLE `posts` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `post_category_id` bigint(20) UNSIGNED NOT NULL,
+  `title` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `body` text COLLATE utf8mb4_unicode_ci,
+  `thumbnail` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `posts`
+--
+
+INSERT INTO `posts` (`id`, `post_category_id`, `title`, `body`, `thumbnail`, `created_at`, `updated_at`) VALUES
+(1, 1, 'wfwerwer', '<p>werwer</p>', 'files/fb0e9c71bc1e3482fb23f6f255c8492b.jpg', '2022-01-15 22:56:54', '2022-01-15 22:56:54'),
+(2, 1, 'ewwe', '<p>wewewe</p>', 'files/g3.jpg', '2022-01-15 23:48:44', '2022-01-15 23:48:55');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `post_categories`
+--
+
+CREATE TABLE `post_categories` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `post_categories`
+--
+
+INSERT INTO `post_categories` (`id`, `name`, `created_at`, `updated_at`) VALUES
+(1, 'Wedding', '2022-01-15 22:48:04', '2022-01-15 22:48:04');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `post_tag`
+--
+
+CREATE TABLE `post_tag` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `tag_id` bigint(20) UNSIGNED NOT NULL,
+  `post_id` bigint(20) UNSIGNED NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `post_tag`
+--
+
+INSERT INTO `post_tag` (`id`, `tag_id`, `post_id`, `created_at`, `updated_at`) VALUES
+(1, 1, 1, NULL, NULL),
+(2, 2, 1, NULL, NULL),
+(3, 1, 2, NULL, NULL);
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `services`
 --
 
@@ -1103,6 +1314,27 @@ INSERT INTO `sliders` (`id`, `short_title`, `title`, `description`, `thumbnail`,
 (1, 'dream wedding', 'To Know Us is to Love Us!', 'We would love to meet up and chat about how we can make YOUR DREAM wedding happen!', 'files/pwe.mp4', 1, NULL, 'Buy Now', '2022-01-10 23:13:22', '2022-01-10 23:17:30'),
 (2, 'dream maker', 'Your Personal Dream Maker', 'We believe that it is all about the BIG DREAMS and the small details!', 'files/02.jpg', 0, NULL, 'Buy Now', '2022-01-10 23:14:24', '2022-01-10 23:17:35'),
 (3, 'planing dream', 'Destination Wedding Planner', 'No matter your dreams - we can assist you in planning your PWE WEDDINGS & EVENTS.', 'files/03.jpg', 0, NULL, NULL, '2022-01-10 23:14:55', '2022-01-10 23:14:55');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tags`
+--
+
+CREATE TABLE `tags` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `tags`
+--
+
+INSERT INTO `tags` (`id`, `name`, `created_at`, `updated_at`) VALUES
+(1, 'Wedding', '2022-01-15 22:51:22', '2022-01-15 22:51:22'),
+(2, 'Ecomerce', '2022-01-15 23:07:03', '2022-01-15 23:07:03');
 
 -- --------------------------------------------------------
 
@@ -1235,6 +1467,28 @@ ALTER TABLE `portfolios`
   ADD KEY `portfolios_package_id_index` (`package_id`);
 
 --
+-- Indexes for table `posts`
+--
+ALTER TABLE `posts`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `posts_post_category_id_foreign` (`post_category_id`);
+
+--
+-- Indexes for table `post_categories`
+--
+ALTER TABLE `post_categories`
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `post_categories_name_unique` (`name`);
+
+--
+-- Indexes for table `post_tag`
+--
+ALTER TABLE `post_tag`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `post_tag_tag_id_foreign` (`tag_id`),
+  ADD KEY `post_tag_post_id_foreign` (`post_id`);
+
+--
 -- Indexes for table `services`
 --
 ALTER TABLE `services`
@@ -1253,6 +1507,13 @@ ALTER TABLE `service_categories`
 --
 ALTER TABLE `sliders`
   ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `tags`
+--
+ALTER TABLE `tags`
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `tags_name_unique` (`name`);
 
 --
 -- Indexes for table `users`
@@ -1275,13 +1536,13 @@ ALTER TABLE `admin_config`
 -- AUTO_INCREMENT for table `admin_menu`
 --
 ALTER TABLE `admin_menu`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
 
 --
 -- AUTO_INCREMENT for table `admin_operation_log`
 --
 ALTER TABLE `admin_operation_log`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=644;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=780;
 
 --
 -- AUTO_INCREMENT for table `admin_permissions`
@@ -1311,7 +1572,7 @@ ALTER TABLE `failed_jobs`
 -- AUTO_INCREMENT for table `migrations`
 --
 ALTER TABLE `migrations`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
 
 --
 -- AUTO_INCREMENT for table `packages`
@@ -1332,6 +1593,24 @@ ALTER TABLE `portfolios`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
+-- AUTO_INCREMENT for table `posts`
+--
+ALTER TABLE `posts`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
+-- AUTO_INCREMENT for table `post_categories`
+--
+ALTER TABLE `post_categories`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
+-- AUTO_INCREMENT for table `post_tag`
+--
+ALTER TABLE `post_tag`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
 -- AUTO_INCREMENT for table `services`
 --
 ALTER TABLE `services`
@@ -1350,6 +1629,12 @@ ALTER TABLE `sliders`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
+-- AUTO_INCREMENT for table `tags`
+--
+ALTER TABLE `tags`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
@@ -1364,6 +1649,19 @@ ALTER TABLE `users`
 --
 ALTER TABLE `portfolios`
   ADD CONSTRAINT `portfolios_package_id_foreign` FOREIGN KEY (`package_id`) REFERENCES `packages` (`id`) ON DELETE CASCADE;
+
+--
+-- Constraints for table `posts`
+--
+ALTER TABLE `posts`
+  ADD CONSTRAINT `posts_post_category_id_foreign` FOREIGN KEY (`post_category_id`) REFERENCES `post_categories` (`id`) ON DELETE CASCADE;
+
+--
+-- Constraints for table `post_tag`
+--
+ALTER TABLE `post_tag`
+  ADD CONSTRAINT `post_tag_post_id_foreign` FOREIGN KEY (`post_id`) REFERENCES `posts` (`id`) ON DELETE CASCADE,
+  ADD CONSTRAINT `post_tag_tag_id_foreign` FOREIGN KEY (`tag_id`) REFERENCES `tags` (`id`) ON DELETE CASCADE;
 
 --
 -- Constraints for table `services`

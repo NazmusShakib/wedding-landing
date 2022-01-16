@@ -2,7 +2,9 @@
 <aside id="pwe-aside">
     <!-- Logo -->
     <h1 id="pwe-logo">
-        <a href="{{ route('page', '/') }}">PWE<i>®</i><span>weddings <small>&#8226;</small> events</span></a>
+        <a href="{{ route('page', '/') }}">
+            <img src="{{ asset('images/logo.png') }}" alt="Logo">
+        </a>
     </h1>
     <!-- Menu -->
     <nav id="pwe-main-menu">

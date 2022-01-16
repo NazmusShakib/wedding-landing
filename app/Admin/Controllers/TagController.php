@@ -2,20 +2,20 @@
 
 namespace App\Admin\Controllers;
 
-use App\Models\ServiceCategory;
+use App\Models\Tag;
 use Encore\Admin\Controllers\AdminController;
 use Encore\Admin\Form;
 use Encore\Admin\Grid;
 use Encore\Admin\Show;
 
-class ServiceCategoryController extends AdminController
+class TagController extends AdminController
 {
     /**
      * Title for current resource.
      *
      * @var string
      */
-    protected $title = 'Category';
+    protected $title = 'Tag';
 
     /**
      * Make a grid builder.
@@ -24,11 +24,11 @@ class ServiceCategoryController extends AdminController
      */
     protected function grid()
     {
-        $grid = new Grid(new ServiceCategory());
+        $grid = new Grid(new Tag());
         $grid->column('id', __('ID'))->sortable();
         $grid->column('name', __('Title'));
-        $grid->column('total_services', __('Total Services'))->display(function () {
-            return $this->services->count();
+        $grid->column('total_posts', __('Total Posts'))->display(function () {
+            return $this->posts->count();
         });
         $grid->column('created_at', __('Created at'))->display(function () {
             return date('d/F/Y h:i a', strtotime($this->created_at));
@@ -47,7 +47,7 @@ class ServiceCategoryController extends AdminController
      */
     protected function detail($id)
     {
-        $show = new Show(ServiceCategory::findOrFail($id));
+        $show = new Show(Tag::findOrFail($id));
 
 
 
@@ -61,8 +61,10 @@ class ServiceCategoryController extends AdminController
      */
     protected function form()
     {
-        $form = new Form(new ServiceCategory());
-        $form->text('name', 'Name')->rules('required|max:255');
+        $form = new Form(new Tag());
+        $form->text('name', 'Name')->rules('required|max:255')
+        ->creationRules(['required', "unique:tags"])
+        ->updateRules(['required', "unique:tags,name,{{id}}"]);
         return $form;
     }
 }
