@@ -3,7 +3,7 @@
         <div class="row">
             <div class="col-md-4 animate-box" data-animate-effect="fadeInLeft">
                 <h2>
-                    <img style="width: 180px;" src="{{ asset('images/logo.png') }}" alt="Logo">
+                    <img style="width: 180px;" src="{{ asset('images/sketch-logo-white.png') }}" alt="Logo">
                 </h2>
                 <div class="social"> 
                     <a {{ (filter_var(config('social_facebook_url'), FILTER_VALIDATE_URL)) ? 'target="_blank"' : '' }} href="{!! config('social_facebook_url') !!}"><i class="ti-facebook"></i></a>
