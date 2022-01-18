@@ -76,7 +76,8 @@ class PostController extends AdminController
         $form->multipleSelect('tags','Tag')->options(Tag::all()->pluck('name','id'));
         $form->text('title', 'Title')->rules('required|max:255');
         $form->quill('body');
-        $form->file('thumbnail')->rules('mimes:jpeg,jpg,mp4,avi')->removable()->downloadable();
+        $form->file('thumbnail')->rules('mimes:png,jpeg,jpg,mp4,avi')
+            ->required()->uniqueName()->removable()->downloadable();
         return $form;
     }
 }

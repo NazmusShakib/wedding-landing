@@ -56,7 +56,7 @@ class ContentServiceProvider extends ServiceProvider
                 $query->whereRelation('tags', 'name', '=', $tag);
             }
         })
-        ->paginate(1);
+        ->paginate(10);
 
         $this->latestPosts = Post::select('id', 'title', 'created_at')->orderBy('id', 'desc')->get()->take(5);
         $this->postCategories = PostCategory::select('id', 'name')->get()->toArray();
@@ -72,9 +72,9 @@ class ContentServiceProvider extends ServiceProvider
 
         view()->composer('pages.blog', function($view) {
             $view->with([
-                'posts' => $this->postsPaginate, 
-                'latestPosts'=>$this->latestPosts, 
-                'postCategories'=>$this->postCategories, 
+                'posts' => $this->postsPaginate,
+                'latestPosts'=>$this->latestPosts,
+                'postCategories'=>$this->postCategories,
                 'postTags'=>$this->postTags
             ]);
         });

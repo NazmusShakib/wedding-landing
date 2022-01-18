@@ -22,9 +22,9 @@ class CreatePortfoliosTable extends Migration
             $table->string('photographer_name')->nullable();
             $table->string('location')->nullable();
             $table->string('thumbnail')->nullable();
-            $table->text('videos')->nullable();
-            $table->text('pictures')->nullable();
-            $table->text('description')->nullable();
+            $table->longText('videos')->nullable();
+            $table->longText('pictures')->nullable();
+            $table->longText('description')->nullable();
             $table->timestamps();
         });
     }

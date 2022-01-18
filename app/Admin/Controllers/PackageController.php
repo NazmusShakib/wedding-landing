@@ -62,7 +62,7 @@ class PackageController extends AdminController
     protected function form()
     {
         $form = new Form(new Package());
-        $form->text('name', 'Name')->rules('required|max:255');
+        $form->text('name', 'Name')->rules('required|max:155');
         $form->list('includes', 'Package Includes');
         $form->text('price', 'Price')->rules('required|numeric');
         $form->quill('body');

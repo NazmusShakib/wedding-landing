@@ -24,14 +24,20 @@
             <div class="col-md-4 animate-box" data-animate-effect="fadeInLeft">
                 <p>
                     <b>Package :</b> {{ $portfolio['package']['name'] }}
+                    @if($portfolio['event_planner'])
                     <br><b>Event Planner :</b> {{ $portfolio['event_planner'] }}
+                    @endif
+                    @if($portfolio['photographer_name'])
                     <br><b>Photographer :</b> {{ $portfolio['photographer_name'] }}
+                    @endif
                     <br><b>Location :</b> {{ $portfolio['location'] }}
                 </p>
             </div>
         </div>
         <!-- Gallery -->
         <div class="row mb-60">
+
+            @if($portfolio['videos'])
             @foreach ($portfolio['videos'] as $video)
                 <div class="col-md-4 gallery-item animate-box" data-animate-effect="fadeInLeft">
                     <a href="{{ $video }}" title="{{ $portfolio['name'] }}" class="magnific-youtube">
@@ -42,7 +48,9 @@
                     </a>
                 </div>
             @endforeach
+            @endif
 
+            @if($portfolio['pictures'])
             @foreach ($portfolio['pictures'] as $picture)
                 <div class="col-md-4 gallery-item animate-box" data-animate-effect="fadeInLeft">
                     <a href="{{ Storage::url($picture) }}" title="{{ $portfolio['name'] }}" class="img-zoom">
@@ -53,6 +61,7 @@
                     </a>
                 </div>
             @endforeach
+            @endif
         </div>
     </div>
 </div>

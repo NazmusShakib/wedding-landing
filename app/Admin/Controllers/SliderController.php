@@ -67,7 +67,8 @@ class SliderController extends AdminController
         $form->text('short_title', 'Short Title')->rules('required|max:25');
         $form->text('title', 'Title')->rules('required|max:255');
         $form->textarea('description')->rules('required|max:255')->rows(5);
-        $form->file('thumbnail')->rules('mimes:jpeg,jpg,mp4,avi')->removable()->downloadable();
+        $form->file('thumbnail')->rules('mimes:jpeg,jpg,mp4,avi')
+            ->uniqueName()->removable()->downloadable();
         $form->text('btn_title', 'Button Title')->rules('max:10');
         $form->url('btn_url', 'Button Url')->default('');
         return $form;

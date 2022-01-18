@@ -18,7 +18,7 @@ class CreateServicesTable extends Migration
             $table->unsignedBigInteger('service_category_id')->nullable()->index();
             $table->foreign('service_category_id')->references('id')->on('service_categories')->onDelete('cascade');
             $table->string('title')->nullable();
-            $table->text('body')->nullable();
+            $table->longText('body')->nullable();
             $table->string('thumbnail')->nullable();
             $table->timestamps();
         });

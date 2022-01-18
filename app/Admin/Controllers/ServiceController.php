@@ -67,7 +67,8 @@ class ServiceController extends AdminController
         $form->select('service_category_id', 'Category')->options(ServiceCategory::all()->pluck('name','id'));
         $form->text('title', 'Title')->rules('required|max:255');
         $form->quill('body');
-        $form->file('thumbnail')->rules('mimes:jpeg,jpg,mp4,avi')->removable()->downloadable();
+        $form->file('thumbnail')->rules('mimes:png,jpeg,jpg,mp4,avi')
+            ->uniqueName()->removable()->downloadable();
         return $form;
     }
 }

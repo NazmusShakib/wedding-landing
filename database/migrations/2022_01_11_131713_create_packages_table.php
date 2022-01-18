@@ -18,7 +18,7 @@ class CreatePackagesTable extends Migration
             $table->string('name')->unique();
             $table->decimal('price', 11, 2)->nullable();
             $table->text('includes')->nullable();
-            $table->text('body')->nullable();
+            $table->longText('body')->nullable();
             $table->timestamps();
         });
     }
