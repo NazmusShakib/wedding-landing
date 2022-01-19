@@ -33,23 +33,43 @@ class PostController extends AdminController
         $grid->column('post_category_id', __('Category'))->display(function () {
             return $this->category->name;
         });
-        $grid->column('tags', __('Tag'))->display(function ($tags) {
+        /* $grid->column('tags', __('Tag'))->display(function ($tags) {
             $tags = array_map(function ($tag) {
                 return "<span class='label label-info'>{$tag['name']}</span>";
             }, $tags);
             return join('&nbsp;', $tags);
-        });
+        }); */
         $grid->column('title', __('Title'));
-        $grid->column("is_published", __("Is Published"))->display(function ($val) {
+        $grid->column("is_published", __("Published"))->display(function ($val) {
             if ($val == 1) {
                 return '<span class="label label-success">Yes</span>';
             } else {
                 return '<span class="label label-danger">No</span>';
             }
         });
+        $grid->column("is_featured", __("Featured"))->display(function ($val) {
+            if ($val == 1) {
+                return '<span class="label label-success">Yes</span>';
+            } else {
+                return '<span class="label label-danger">No</span>';
+            }
+        });
+        $grid->column('display_order', __('Display Order'));
         $grid->column('created_at', __('Created at'))->display(function () {
             return date('d/F/Y h:i a', strtotime($this->created_at));
         });
+
+        $grid->disableExport();
+
+        $grid->filter(function ($filter) {
+            // Remove the default id filter
+            // $filter->disableIdFilter();
+            $filter->like("title", "Title");
+            $filter->like("category.name", "Category");
+            $filter->between('created_at', 'Created At')->datetime();
+
+        });
+
         return $grid;
     }
 

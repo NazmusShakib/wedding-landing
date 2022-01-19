@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Jan 19, 2022 at 10:36 AM
+-- Generation Time: Jan 19, 2022 at 11:27 AM
 -- Server version: 5.7.36
 -- PHP Version: 7.4.27
 
@@ -1006,7 +1006,10 @@ INSERT INTO `admin_operation_log` (`id`, `user_id`, `path`, `method`, `ip`, `inp
 (885, 1, 'admin/posts', 'GET', '127.0.0.1', '[]', '2022-01-19 04:25:10', '2022-01-19 04:25:10'),
 (886, 1, 'admin/posts', 'GET', '127.0.0.1', '[]', '2022-01-19 04:27:26', '2022-01-19 04:27:26'),
 (887, 1, 'admin/posts', 'GET', '127.0.0.1', '[]', '2022-01-19 04:27:41', '2022-01-19 04:27:41'),
-(888, 1, 'admin/posts', 'GET', '127.0.0.1', '[]', '2022-01-19 04:28:33', '2022-01-19 04:28:33');
+(888, 1, 'admin/posts', 'GET', '127.0.0.1', '[]', '2022-01-19 04:28:33', '2022-01-19 04:28:33'),
+(889, 1, 'admin/posts', 'GET', '127.0.0.1', '[]', '2022-01-19 05:20:35', '2022-01-19 05:20:35'),
+(890, 1, 'admin/posts', 'GET', '127.0.0.1', '[]', '2022-01-19 05:20:53', '2022-01-19 05:20:53'),
+(891, 1, 'admin/posts', 'GET', '127.0.0.1', '[]', '2022-01-19 05:23:53', '2022-01-19 05:23:53');
 
 -- --------------------------------------------------------
 
@@ -1297,6 +1300,7 @@ CREATE TABLE `posts` (
   `id` bigint(20) UNSIGNED NOT NULL,
   `post_category_id` bigint(20) UNSIGNED NOT NULL,
   `title` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `slug` varchar(222) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `body` longtext COLLATE utf8mb4_unicode_ci,
   `thumbnail` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `is_featured` tinyint(1) DEFAULT '0',
@@ -1311,9 +1315,9 @@ CREATE TABLE `posts` (
 -- Dumping data for table `posts`
 --
 
-INSERT INTO `posts` (`id`, `post_category_id`, `title`, `body`, `thumbnail`, `is_featured`, `is_published`, `display_order`, `created_by`, `created_at`, `updated_at`) VALUES
-(1, 1, 'wfwerwer', '<p>Vestibulum facilisis, purus nec pulvinar iaculis, ligula mi congue nunc, vitae euismod ligula urna in dolor. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Nulla porta dolor. Phasellus a est. Nullam sagittis.</p><p><br></p><p>Fusce fermentum. Sed fringilla mauris sit amet nibh. Etiam ultricies nisi vel augue. Curabitur suscipit suscipit tellus. Praesent turpis.</p><p><br></p><p>Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Etiam ultricies nisi vel augue. Maecenas egestas arcu quis ligula mattis placerat. Donec orci lectus, aliquam ut, faucibus non, euismod id, nulla. Quisque rutrum.</p><p><br></p><p>Curabitur a felis in nunc fringilla tristique. Nulla facilisi. Mauris turpis nunc, blandit et, volutpat molestie, porta ut, ligula. Pellentesque dapibus hendrerit tortor. Nunc interdum lacus sit amet orci.</p><p><br></p><p>Nam eget dui. Sed libero. Quisque libero metus, condimentum nec, tempor a, commodo mollis, magna. Etiam feugiat lorem non metus. Nullam nulla eros, ultricies sit amet, nonummy id, imperdiet feugiat, pede.</p>', 'files/c0c2a0035cdb4760d5b323e82245ae3b.jpg', 0, 0, 99999, '1', '2022-01-15 22:56:54', '2022-01-19 04:25:10'),
-(2, 1, 'ewwe', '<p>wewewe</p>', 'files/g3.jpg', 0, 0, 99999, NULL, '2022-01-15 23:48:44', '2022-01-15 23:48:55');
+INSERT INTO `posts` (`id`, `post_category_id`, `title`, `slug`, `body`, `thumbnail`, `is_featured`, `is_published`, `display_order`, `created_by`, `created_at`, `updated_at`) VALUES
+(1, 1, 'wfwerwer', NULL, '<p>Vestibulum facilisis, purus nec pulvinar iaculis, ligula mi congue nunc, vitae euismod ligula urna in dolor. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Nulla porta dolor. Phasellus a est. Nullam sagittis.</p><p><br></p><p>Fusce fermentum. Sed fringilla mauris sit amet nibh. Etiam ultricies nisi vel augue. Curabitur suscipit suscipit tellus. Praesent turpis.</p><p><br></p><p>Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Etiam ultricies nisi vel augue. Maecenas egestas arcu quis ligula mattis placerat. Donec orci lectus, aliquam ut, faucibus non, euismod id, nulla. Quisque rutrum.</p><p><br></p><p>Curabitur a felis in nunc fringilla tristique. Nulla facilisi. Mauris turpis nunc, blandit et, volutpat molestie, porta ut, ligula. Pellentesque dapibus hendrerit tortor. Nunc interdum lacus sit amet orci.</p><p><br></p><p>Nam eget dui. Sed libero. Quisque libero metus, condimentum nec, tempor a, commodo mollis, magna. Etiam feugiat lorem non metus. Nullam nulla eros, ultricies sit amet, nonummy id, imperdiet feugiat, pede.</p>', 'files/c0c2a0035cdb4760d5b323e82245ae3b.jpg', 0, 0, 99999, '1', '2022-01-15 22:56:54', '2022-01-19 04:25:10'),
+(2, 1, 'ewwe', NULL, '<p>wewewe</p>', 'files/g3.jpg', 0, 0, 99999, NULL, '2022-01-15 23:48:44', '2022-01-15 23:48:55');
 
 -- --------------------------------------------------------
 
@@ -1656,7 +1660,7 @@ ALTER TABLE `admin_menu`
 -- AUTO_INCREMENT for table `admin_operation_log`
 --
 ALTER TABLE `admin_operation_log`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=889;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=892;
 
 --
 -- AUTO_INCREMENT for table `admin_permissions`

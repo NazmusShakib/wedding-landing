@@ -35,4 +35,5 @@
     <!-- Pricing -->
 
     @include('pages.section.packages')
+    @include('pages.section.testiominal')
 @stop

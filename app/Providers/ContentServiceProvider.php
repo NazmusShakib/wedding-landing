@@ -66,7 +66,7 @@ class ContentServiceProvider extends ServiceProvider
 
         $this->featuredPosts = Post::with('category:id,name')
         ->select('id', 'title', 'body', 'thumbnail', 'post_category_id', 'created_at')
-        ->featured()->published()->limit(6)->descOrdered()->get()->toArray();
+        ->featured()->published()->limit(6)->orderBy('display_order', 'ASC')->get()->toArray();
         
         $this->postCategories = PostCategory::select('id', 'name')->get()->toArray();
         $this->postTags = Tag::select('id', 'name')->get()->toArray();
