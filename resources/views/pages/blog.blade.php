@@ -8,7 +8,7 @@
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-md-12"> <span class="heading-meta">read</span>
-                        <h2 class="pwe-heading animate-box" data-animate-effect="fadeInLeft">Blog</h2>
+                        <h2 class="pwe-heading animate-box" data-animate-effect="fadeInLeft">News</h2>
                     </div>
                 </div>
             </div>

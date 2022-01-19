@@ -31,4 +31,9 @@ class Portfolio extends Model
     {
         return $this->belongsTo(Package::class, 'package_id');
     }
+
+    public function scopeDescOrdered($query)
+    {
+        return $query->orderBy('created_at', 'DESC');
+    }
 }

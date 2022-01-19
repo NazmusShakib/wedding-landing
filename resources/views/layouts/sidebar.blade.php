@@ -13,7 +13,7 @@
             <li><a href="{{ route('page', 'about-us') }}">About</a></li>
             <li><a href="{{ route('page', 'services') }}">Services</a></li>
             <li><a href="{{ route('page', 'portfolio') }}">Portfolio</a></li>
-            <li><a href="{{ route('page', 'blog') }}">Blog</a></li>
+            <li><a href="{{ route('page', 'blog') }}">News</a></li>
             <li><a href="{{ route('page', 'contact-us') }}">Contact</a></li>
         </ul>
     </nav>

@@ -34,8 +34,11 @@ class ContentServiceProvider extends ServiceProvider
         $this->sliders = Slider::select('id', 'thumbnail_type', 'short_title', 'title', 'description', 'thumbnail', 'btn_title', 'btn_url')->get()->toArray();
         $this->services = Service::with('category:id,name')->select('id', 'service_category_id', 'title', 'thumbnail')->get()->toArray();
         $this->packages = Package::select('id', 'name', 'price', 'includes')->get()->toArray();
-        $this->portfolios = Portfolio::select('id', 'name', 'thumbnail')->get()->toArray();
-        $this->posts = Post::with('category:id,name')->select('id', 'post_category_id', 'title', 'thumbnail', 'body', 'created_at')->get()->toArray();
+        $this->portfolios = Portfolio::with('package:id,name,price')->select('id', 'name', 'thumbnail', 'package_id')
+        ->descOrdered()->get()->toArray();
+        $this->posts = Post::with('category:id,name')
+        ->select('id', 'post_category_id', 'title', 'thumbnail', 'body', 'created_at')
+        ->descOrdered()->get()->toArray();
 
         $search = request('title');
         $category = request('category');
@@ -55,10 +58,11 @@ class ContentServiceProvider extends ServiceProvider
             if (!empty($tag)) {
                 $query->whereRelation('tags', 'name', '=', $tag);
             }
-        })
-        ->paginate(10);
+        })->descOrdered()->paginate(10);
 
-        $this->latestPosts = Post::select('id', 'title', 'created_at')->orderBy('id', 'desc')->get()->take(5);
+        $this->latestPosts = Post::with('category:id,name')
+        ->select('id', 'title', 'body', 'thumbnail', 'post_category_id', 'created_at')
+        ->limit(6)->descOrdered()->get()->toArray();
         $this->postCategories = PostCategory::select('id', 'name')->get()->toArray();
         $this->postTags = Tag::select('id', 'name')->get()->toArray();
 
@@ -67,7 +71,7 @@ class ContentServiceProvider extends ServiceProvider
         });
 
         view()->composer('pages.section.blog', function($view) {
-            $view->with(['posts' => $this->posts]);
+            $view->with(['latestPosts'=>$this->latestPosts,]);
         });
 
         view()->composer('pages.blog', function($view) {
@@ -83,7 +87,7 @@ class ContentServiceProvider extends ServiceProvider
             $view->with(['packages' => $this->packages]);
         });
 
-        view()->composer('pages.portfolio', function($view) {
+        view()->composer(['pages.portfolio', 'pages.section.recentPortfolio'], function($view) {
             $view->with(['portfolios' => $this->portfolios]);
         });
 

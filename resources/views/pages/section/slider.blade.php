@@ -7,9 +7,11 @@
                 @else
                     <li style="background-image: url({{ Storage::url($slider['thumbnail']) }});"><div class="overlay"></div>
                 @endif
+                    
                     <div class="container-fluid">
                         <div class="row">
                             <div class="col-md-6 js-fullheight slider-text">
+                                @if($slider['short_title'] || $slider['title'] || $slider['description'])
                                 <div class="slider-text-inner">
                                     <div class="desc">
                                         <h6>{{ $slider['short_title'] }}</h6>
@@ -20,6 +22,7 @@
                                         @endif
                                     </div>
                                 </div>
+                                @endif
                             </div>
                         </div>
                     </div>

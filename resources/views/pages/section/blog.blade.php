@@ -2,11 +2,11 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-12 mb-30"> <span class="heading-meta">read blog</span>
-                <h2 class="pwe-heading animate-box" data-animate-effect="fadeInLeft">Latest Posts</h2>
+                <h2 class="pwe-heading animate-box" data-animate-effect="fadeInLeft">Latest News</h2>
             </div>
         </div>
         <div class="row">
-            @foreach($posts as $post)
+            @foreach($latestPosts as $post)
             <div class="col-md-4">
                 <div class="item mb-30 animate-box" data-animate-effect="fadeInLeft">
                     <div class="post-img"> <img src="{{ Storage::url($post['thumbnail']) }}" alt="{{ $post['title'] }}">
