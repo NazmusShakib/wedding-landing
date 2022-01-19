@@ -52,7 +52,7 @@
                         </div>
                     </div>
                     <div class="pwe-sidebar-block pwe-sidebar-block-latest-posts">
-                        <div class="pwe-sidebar-block-title"> Latest Posts </div>
+                        <div class="pwe-sidebar-block-title"> Latest News </div>
                         <div class="pwe-sidebar-block-content">
                             @foreach($latestPosts as $post)
                                 <div class="latest">

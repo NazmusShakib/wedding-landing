@@ -21,6 +21,16 @@ class Post extends Model
         return $this->belongsToMany(Tag::class);
     }
 
+    public function scopePublished($query)
+    {
+        return $query->where('is_published', true);
+    }
+
+    public function scopeFeatured($query)
+    {
+        return $query->where('is_featured', true);
+    }
+
     public function scopeDescOrdered($query)
     {
         return $query->orderBy('created_at', 'DESC');

@@ -38,7 +38,7 @@ class ContentServiceProvider extends ServiceProvider
         ->descOrdered()->get()->toArray();
         $this->posts = Post::with('category:id,name')
         ->select('id', 'post_category_id', 'title', 'thumbnail', 'body', 'created_at')
-        ->descOrdered()->get()->toArray();
+        ->published()->descOrdered()->get()->toArray();
 
         $search = request('title');
         $category = request('category');
@@ -58,11 +58,16 @@ class ContentServiceProvider extends ServiceProvider
             if (!empty($tag)) {
                 $query->whereRelation('tags', 'name', '=', $tag);
             }
-        })->descOrdered()->paginate(10);
+        })->published()->descOrdered()->paginate(10);
 
         $this->latestPosts = Post::with('category:id,name')
         ->select('id', 'title', 'body', 'thumbnail', 'post_category_id', 'created_at')
-        ->limit(6)->descOrdered()->get()->toArray();
+        ->published()->limit(6)->descOrdered()->get()->toArray();
+
+        $this->featuredPosts = Post::with('category:id,name')
+        ->select('id', 'title', 'body', 'thumbnail', 'post_category_id', 'created_at')
+        ->featured()->published()->limit(6)->descOrdered()->get()->toArray();
+        
         $this->postCategories = PostCategory::select('id', 'name')->get()->toArray();
         $this->postTags = Tag::select('id', 'name')->get()->toArray();
 
@@ -71,7 +76,7 @@ class ContentServiceProvider extends ServiceProvider
         });
 
         view()->composer('pages.section.blog', function($view) {
-            $view->with(['latestPosts'=>$this->latestPosts,]);
+            $view->with(['featuredPosts'=>$this->featuredPosts]);
         });
 
         view()->composer('pages.blog', function($view) {

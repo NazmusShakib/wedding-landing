@@ -6,6 +6,7 @@ use App\Models\Post;
 use App\Models\Tag;
 use App\Models\PostCategory;
 use Encore\Admin\Controllers\AdminController;
+use Encore\Admin\Facades\Admin;
 use Encore\Admin\Form;
 use Encore\Admin\Grid;
 use Encore\Admin\Show;
@@ -39,11 +40,15 @@ class PostController extends AdminController
             return join('&nbsp;', $tags);
         });
         $grid->column('title', __('Title'));
+        $grid->column("is_published", __("Is Published"))->display(function ($val) {
+            if ($val == 1) {
+                return '<span class="label label-success">Yes</span>';
+            } else {
+                return '<span class="label label-danger">No</span>';
+            }
+        });
         $grid->column('created_at', __('Created at'))->display(function () {
             return date('d/F/Y h:i a', strtotime($this->created_at));
-        });
-        $grid->column('updated_at', __('Updated at'))->display(function () {
-            return date('d/F/Y h:i a', strtotime($this->updated_at));
         });
         return $grid;
     }
@@ -78,6 +83,10 @@ class PostController extends AdminController
         $form->quill('body');
         $form->file('thumbnail')->rules('mimes:png,jpeg,jpg,mp4,avi')
             ->required()->uniqueName()->removable()->downloadable();
+        $form->number('display_order',  __("Display Order"))->default(99999)->required();
+        $form->switch('is_featured', __("Is Featured"));
+        $form->switch('is_published', __("Is Published"));
+        $form->hidden("created_by")->default(Admin::user()->id);
         return $form;
     }
 }

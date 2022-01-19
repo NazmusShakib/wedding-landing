@@ -1,3 +1,4 @@
+@if($featuredPosts)
 <div class="blog-section blog pt-90 pb-90">
     <div class="container-fluid">
         <div class="row">
@@ -6,7 +7,7 @@
             </div>
         </div>
         <div class="row">
-            @foreach($latestPosts as $post)
+            @foreach($featuredPosts as $post)
             <div class="col-md-4">
                 <div class="item mb-30 animate-box" data-animate-effect="fadeInLeft">
                     <div class="post-img"> <img src="{{ Storage::url($post['thumbnail']) }}" alt="{{ $post['title'] }}">
@@ -27,3 +28,4 @@
         </div>
     </div>
 </div>
+@endif

@@ -19,6 +19,10 @@ class CreatePostsTable extends Migration
             $table->string('title')->nullable();
             $table->longText('body')->nullable();
             $table->string('thumbnail')->nullable();
+            $table->boolean('is_featured')->default(false);
+            $table->boolean('is_published')->default(false);
+            $table->integer('display_order')->default('9999')->nullable();
+            $table->string('created_by')->nullable();
             $table->timestamps();
         });
     }
