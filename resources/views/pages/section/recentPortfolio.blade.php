@@ -34,7 +34,7 @@
             </div> --}}
             @foreach($portfolios as $portfolio)
                 <div class="col-lg-4 col-sm-6 col-xs-12">
-                    <div class="item" style="margin-bottom: 30px;">
+                    <div class="item animate-box" data-animate-effect="fadeInLeft" style="margin-bottom: 30px;">
                         <div class="position-re o-hidden">
                             <img src="{{ Storage::url($portfolio['thumbnail']) }}" alt="{{ $portfolio['name'] }}">
                         </div>
