@@ -24,6 +24,7 @@
         <div class="row">
             <div class="col-md-12 animate-box" data-animate-effect="fadeInLeft">
                 {!! $post->body !!}
+                {!! $shareButtons !!}
             </div>
         </div>
     </div>

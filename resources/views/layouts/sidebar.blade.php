@@ -9,16 +9,16 @@
     <!-- Menu -->
     <nav id="pwe-main-menu">
         <ul>
-            <li class="pwe-active"><a href="{{ route('page', '/') }}">Home</a></li>
-            <li><a href="{{ route('page', 'about-us') }}">About</a></li>
-            <li><a href="{{ route('page', 'services') }}">Services</a></li>
-            <li><a href="{{ route('page', 'portfolio') }}">Portfolio</a></li>
-            <li><a href="{{ route('page', 'blog') }}">News</a></li>
-            <li><a href="{{ route('page', 'contact-us') }}">Contact</a></li>
+            <li class="{{ (request()->is('/')) ? 'pwe-active' : '' }}"><a href="{{ route('page', '/') }}">Home</a></li>
+            <li class="{{ (request()->is('about-us*')) ? 'pwe-active' : '' }}"><a href="{{ route('page', 'about-us') }}">About</a></li>
+            <li class="{{ (request()->is('service*')) ? 'pwe-active' : '' }}"><a href="{{ route('page', 'services') }}">Services</a></li>
+            <li class="{{ (request()->is('portfolio*')) ? 'pwe-active' : '' }}"><a href="{{ route('page', 'portfolio') }}">Portfolio</a></li>
+            <li class="{{ (request()->is('blog*')) ? 'pwe-active' : '' }}"><a href="{{ route('page', 'blog') }}">News</a></li>
+            <li class="{{ (request()->is('contact-us')) ? 'pwe-active' : '' }}"><a href="{{ route('page', 'contact-us') }}">Contact</a></li>
         </ul>
     </nav>
     <!-- Sidebar Footer -->
-    <div class="pwe-footer">
+    <div class="pwe-footer d-none d-lg-block">
         <div class="separator"></div>
         <p>{{ config('contact_number') }}
             <br />{{ config('contact_email') }}</p>

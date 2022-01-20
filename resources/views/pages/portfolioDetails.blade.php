@@ -20,6 +20,7 @@
         <div class="row">
             <div class="col-md-8 animate-box" data-animate-effect="fadeInLeft">
                 <p>{{ $portfolio['description'] }}</p>
+                {!! $shareButtons !!}
             </div>
             <div class="col-md-4 animate-box" data-animate-effect="fadeInLeft">
                 <p>

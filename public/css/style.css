@@ -1154,8 +1154,18 @@ body.offcanvas .pwe-nav-toggle {
 /* ===== Services  ===== */
 .services .item {
     position: relative;
+    min-height: 345px;
     overflow: hidden;
 }
+
+.services .item .position-re.o-hidden{
+    height: 345px;
+}
+
+.services .item .position-re.o-hidden img{
+    height: 100%;
+}
+
 .services .item:hover img {
     -webkit-filter: none;
     filter: none;

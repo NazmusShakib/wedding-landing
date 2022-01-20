@@ -42,12 +42,32 @@ class PublicController extends Controller
     public function portfolioDetails($id)
     {
         $portfolio = Portfolio::with('package')->find($id)->toArray();
-        return view('pages.portfolioDetails', compact('portfolio'));
+
+        $shareButtons = \Share::page(
+            route('portfolio.details', [$portfolio['id'], str_slug($portfolio['name'])])
+        )
+        ->facebook()
+        ->twitter()
+        ->linkedin()
+        ->telegram()
+        ->whatsapp()        
+        ->reddit();
+
+        return view('pages.portfolioDetails', compact('portfolio', 'shareButtons'));
     }
 
     public function postDetails($id)
     {
         $post = Post::find($id);
-        return view('pages.postDetails', compact('post'));
+        $shareButtons = \Share::page(
+            route('post.details', [$post->id, str_slug($post->title)])
+        )
+        ->facebook()
+        ->twitter()
+        ->linkedin()
+        ->telegram()
+        ->whatsapp()        
+        ->reddit();
+        return view('pages.postDetails', compact('post', 'shareButtons'));
     }
 }
