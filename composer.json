@@ -8,6 +8,7 @@
         "php": "^7.3|^8.0",
         "dianwoung/large-file-upload": "^0.0.3",
         "encore/laravel-admin": "1.*",
+        "facebook/graph-sdk": "^5.7",
         "fruitcake/laravel-cors": "^2.0",
         "guzzlehttp/guzzle": "^7.0.1",
         "jorenvanhocht/laravel-share": "^4.1",

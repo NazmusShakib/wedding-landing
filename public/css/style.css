@@ -394,8 +394,8 @@ input[type="checkbox"] {
     position: relative;
 }
 #pwe-aside {
-    padding: 60px 30px;
-    width: 23%;
+    padding: 60px 15px;
+    width: 18%;
     position: fixed;
     bottom: 0;
     top: 0;
@@ -412,7 +412,7 @@ input[type="checkbox"] {
 }
 @media screen and (max-width: 1200px) {
     #pwe-aside {
-        width: 30%;
+        width: 24%;
     }
 }
 @media screen and (max-width: 768px) {
@@ -450,7 +450,7 @@ input[type="checkbox"] {
     letter-spacing: 1px;
 }
 #pwe-aside #pwe-logo img {
-    width: 180px;
+    max-width: 180px;
 }
 #pwe-logo-footer {
     text-align: center;
@@ -612,7 +612,7 @@ input[type="checkbox"] {
 
 /* ===== Content styles ===== */
 #pwe-main {
-    width: 77%;
+    width: 82%;
     float: right;
     -webkit-transition: 0.5s;
     -o-transition: 0.5s;
@@ -620,7 +620,7 @@ input[type="checkbox"] {
 }
 @media screen and (max-width: 1200px) {
     #pwe-main {
-        width: 70%;
+        width: 76%;
     }
 }
 @media screen and (max-width: 768px) {
@@ -777,7 +777,6 @@ body.offcanvas .pwe-nav-toggle {
     -o-transform: translateX(270px);
     transform: translateX(270px);
 }
-
 
 /* video background */
 .overlay-video {

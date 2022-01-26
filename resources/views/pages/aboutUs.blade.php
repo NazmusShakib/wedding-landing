@@ -95,7 +95,7 @@
     </div>
     <!-- Pricing -->
 
-    @include('pages.section.packages')
+    {{-- @include('pages.section.packages') --}}
 
     @include('pages.section.clients')
 @stop

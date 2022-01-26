@@ -1,4 +1,4 @@
-<div class="services-section services clear pt-90 pb-90">
+<div class="services-section services clear pb-90">
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-12 mb-30"> <span class="heading-meta">our . events</span> 

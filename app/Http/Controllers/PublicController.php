@@ -6,6 +6,7 @@ use App\Models\Service;
 use App\Models\Package;
 use App\Models\Portfolio;
 use App\Models\Post;
+use \Facebook\Facebook as FB;
 
 class PublicController extends Controller
 {
