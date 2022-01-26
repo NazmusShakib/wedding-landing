@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Jan 16, 2022 at 07:17 AM
+-- Generation Time: Jan 26, 2022 at 05:39 AM
 -- Server version: 5.7.33
 -- PHP Version: 7.4.9
 
@@ -41,16 +41,21 @@ CREATE TABLE `admin_config` (
 --
 
 INSERT INTO `admin_config` (`id`, `name`, `value`, `description`, `created_at`, `updated_at`) VALUES
-(1, 'contact_number', '+8801730-710493', 'Contact Mobile Number', '2022-01-10 05:10:43', '2022-01-10 05:18:50'),
-(2, 'contact_email', 'shahjahanevents@gmail.com', 'Email Address', '2022-01-10 05:13:12', '2022-01-10 05:19:06'),
+(1, 'contact_number', '+88...', 'Contact Mobile Number', '2022-01-10 05:10:43', '2022-01-19 01:40:12'),
+(2, 'contact_email', 'contact@sketchimagination.com', 'Email Address', '2022-01-10 05:13:12', '2022-01-19 01:39:51'),
 (3, 'office_address', 'Road # 28, House # 376/A,\r\n<br>\r\n2nd Floor, New DOHS \r\n<br>\r\nMohakhali 1206 Dhaka,\r\n<br>\r\nDhaka Division, Bangladesh', 'Office Address', '2022-01-10 05:15:35', '2022-01-10 05:20:29'),
 (4, 'copyright', 'All rights reserved.', 'Copyright', '2022-01-10 05:21:36', '2022-01-10 05:21:36'),
 (5, 'social_facebook_url', 'https://web.facebook.com/shahjahan.events/?_rdc=1&_rdr', 'Facebook Page', '2022-01-10 05:23:17', '2022-01-10 05:23:17'),
 (6, 'social_twitter_url', '#', 'Twitter Url', '2022-01-10 05:24:12', '2022-01-10 05:24:12'),
 (7, 'social_instagram_url', 'https://www.instagram.com/shahjahan_wedding_planner/', 'Instagram Url', '2022-01-10 05:25:00', '2022-01-10 05:25:00'),
 (8, 'social_pinterest_url', '#', 'Pinterest Url', '2022-01-10 05:25:37', '2022-01-10 05:25:37'),
-(9, 'website_title', 'Shahjahan Wedding Planner & Event Management Ltd', 'Website Title', '2022-01-10 05:37:03', '2022-01-10 05:37:03'),
-(10, 'website_description', 'This organization carries a vivid fame and glory by an incompatible performance in Wedding planning and Event management services since the establishment. Customer’s satisfaction is the highest priority of our service. We not only provide services for wedding and event but also care for the quality. Our professional honesty, sincerity and quality control ensure you a splendid wedding planning and event management which is unique throughout the country.', 'Website Description', '2022-01-10 05:40:58', '2022-01-10 05:40:58');
+(9, 'website_title', 'Sketch Imagination Ltd', 'Website Title', '2022-01-10 05:37:03', '2022-01-19 03:13:05'),
+(10, 'website_description', 'This organization carries a vivid fame and glory by an incompatible performance in Wedding planning and Event management services since the establishment. Customer’s satisfaction is the highest priority of our service. We not only provide services for wedding and event but also care for the quality. Our professional honesty, sincerity and quality control ensure you a splendid wedding planning and event management which is unique throughout the country.', 'Website Description', '2022-01-10 05:40:58', '2022-01-10 05:40:58'),
+(11, 'facebook_page_id', '872497166193591', 'Facebook Page ID', '2022-01-25 07:55:35', '2022-01-25 07:55:35'),
+(12, 'facebook_app_id', '484430926360436', 'Facebook App ID', '2022-01-25 07:56:04', '2022-01-25 07:56:04'),
+(13, 'facebook_app_secret', '1d70357827846e6a4bde7a9e3b8f9590', 'Facebook App Secret', '2022-01-25 07:56:30', '2022-01-25 07:56:30'),
+(14, 'facebook_page_name', 'Creative Web Solution', 'Facebook Page Name', '2022-01-25 07:57:39', '2022-01-25 07:57:39'),
+(15, 'facebook_page_access_token', 'EAAG4ll1Ir3QBACdsPpdrfhF3zcscFomEuhkTLEVH4hkAojOlXADuNYSR5JXYFhZCnHNQIaApC8jEIdGDjGKHet8mGMxtWTuuGl5mlaawZCq93CaQ1J6TYjTQGB25NrjYBFDR7O88HbwTPK8Ci7le6jXoFLCE1JGOP0ncvmRfuyKje7MV5lsKbCLHTHLJoZD', 'Facebook Page Access Token', '2022-01-25 07:58:18', '2022-01-25 07:58:18');
 
 -- --------------------------------------------------------
 
@@ -896,7 +901,165 @@ INSERT INTO `admin_operation_log` (`id`, `user_id`, `path`, `method`, `ip`, `inp
 (776, 1, 'admin/posts/2/edit', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2022-01-15 23:48:50', '2022-01-15 23:48:50'),
 (777, 1, 'admin/posts/2', 'PUT', '127.0.0.1', '{\"post_category_id\":\"1\",\"tags\":[\"1\",null],\"title\":\"ewwe\",\"body\":\"<p>wewewe<\\/p>\",\"_token\":\"tE8RPTmVZresZli5AaDt234PytdgevIYvbZj5YhV\",\"_method\":\"PUT\",\"_previous_\":\"http:\\/\\/wedding.test\\/admin\\/posts\"}', '2022-01-15 23:48:55', '2022-01-15 23:48:55'),
 (778, 1, 'admin/posts', 'GET', '127.0.0.1', '[]', '2022-01-15 23:48:55', '2022-01-15 23:48:55'),
-(779, 1, 'admin', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2022-01-16 01:17:32', '2022-01-16 01:17:32');
+(779, 1, 'admin', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2022-01-16 01:17:32', '2022-01-16 01:17:32'),
+(780, 1, 'admin', 'GET', '127.0.0.1', '[]', '2022-01-19 01:30:16', '2022-01-19 01:30:16'),
+(781, 1, 'admin', 'GET', '127.0.0.1', '[]', '2022-01-19 01:31:43', '2022-01-19 01:31:43'),
+(782, 1, 'admin', 'GET', '127.0.0.1', '[]', '2022-01-19 01:32:57', '2022-01-19 01:32:57'),
+(783, 1, 'admin', 'GET', '127.0.0.1', '[]', '2022-01-19 01:33:28', '2022-01-19 01:33:28'),
+(784, 1, 'admin', 'GET', '127.0.0.1', '[]', '2022-01-19 01:33:49', '2022-01-19 01:33:49'),
+(785, 1, 'admin', 'GET', '127.0.0.1', '[]', '2022-01-19 01:34:12', '2022-01-19 01:34:12'),
+(786, 1, 'admin', 'GET', '127.0.0.1', '[]', '2022-01-19 01:38:01', '2022-01-19 01:38:01'),
+(787, 1, 'admin', 'GET', '127.0.0.1', '[]', '2022-01-19 01:38:21', '2022-01-19 01:38:21'),
+(788, 1, 'admin', 'GET', '127.0.0.1', '[]', '2022-01-19 01:38:46', '2022-01-19 01:38:46'),
+(789, 1, 'admin', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2022-01-19 01:38:49', '2022-01-19 01:38:49'),
+(790, 1, 'admin/auth/users', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2022-01-19 01:38:51', '2022-01-19 01:38:51'),
+(791, 1, 'admin/auth/roles', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2022-01-19 01:38:52', '2022-01-19 01:38:52'),
+(792, 1, 'admin/auth/menu', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2022-01-19 01:38:54', '2022-01-19 01:38:54'),
+(793, 1, 'admin', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2022-01-19 01:38:57', '2022-01-19 01:38:57'),
+(794, 1, 'admin/auth/menu', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2022-01-19 01:39:08', '2022-01-19 01:39:08'),
+(795, 1, 'admin/config', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2022-01-19 01:39:13', '2022-01-19 01:39:13'),
+(796, 1, 'admin/config/2/edit', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2022-01-19 01:39:24', '2022-01-19 01:39:24'),
+(797, 1, 'admin/config/2', 'PUT', '127.0.0.1', '{\"name\":\"contact_email\",\"value\":\"contact@sketchimagination.com\",\"description\":\"Email Address\",\"_token\":\"SexVjeXVpCIae3briQcewKSxunrXTVvQ7R3Sdeeu\",\"_method\":\"PUT\",\"_previous_\":\"http:\\/\\/localhost:8000\\/admin\\/config\"}', '2022-01-19 01:39:51', '2022-01-19 01:39:51'),
+(798, 1, 'admin/config', 'GET', '127.0.0.1', '[]', '2022-01-19 01:39:51', '2022-01-19 01:39:51'),
+(799, 1, 'admin/config/1', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2022-01-19 01:39:59', '2022-01-19 01:39:59'),
+(800, 1, 'admin/config/1/edit', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2022-01-19 01:40:01', '2022-01-19 01:40:01'),
+(801, 1, 'admin/config/1', 'PUT', '127.0.0.1', '{\"name\":\"contact_number\",\"value\":\"+88...\",\"description\":\"Contact Mobile Number\",\"_token\":\"SexVjeXVpCIae3briQcewKSxunrXTVvQ7R3Sdeeu\",\"_method\":\"PUT\",\"_previous_\":\"http:\\/\\/localhost:8000\\/admin\\/config\\/1\"}', '2022-01-19 01:40:12', '2022-01-19 01:40:12'),
+(802, 1, 'admin/config/1', 'GET', '127.0.0.1', '[]', '2022-01-19 01:40:12', '2022-01-19 01:40:12'),
+(803, 1, 'admin/config', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2022-01-19 01:40:14', '2022-01-19 01:40:14'),
+(804, 1, 'admin/post-categories', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2022-01-19 01:40:25', '2022-01-19 01:40:25'),
+(805, 1, 'admin/auth/users', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2022-01-19 01:40:27', '2022-01-19 01:40:27'),
+(806, 1, 'admin/auth/roles', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2022-01-19 01:40:29', '2022-01-19 01:40:29'),
+(807, 1, 'admin/auth/permissions', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2022-01-19 01:40:30', '2022-01-19 01:40:30'),
+(808, 1, 'admin/sliders', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2022-01-19 01:40:33', '2022-01-19 01:40:33'),
+(809, 1, 'admin/sliders/1/edit', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2022-01-19 01:40:38', '2022-01-19 01:40:38'),
+(810, 1, 'admin/sliders', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2022-01-19 01:41:00', '2022-01-19 01:41:00'),
+(811, 1, 'admin/sliders/create', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2022-01-19 01:41:01', '2022-01-19 01:41:01'),
+(812, 1, 'admin/sliders', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2022-01-19 01:42:52', '2022-01-19 01:42:52'),
+(813, 1, 'admin/sliders/1/edit', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2022-01-19 01:42:56', '2022-01-19 01:42:56'),
+(814, 1, 'admin/sliders/1', 'PUT', '127.0.0.1', '{\"key\":\"0\",\"thumbnail\":\"_file_del_\",\"_file_del_\":null,\"_token\":\"SexVjeXVpCIae3briQcewKSxunrXTVvQ7R3Sdeeu\",\"_method\":\"PUT\"}', '2022-01-19 01:47:13', '2022-01-19 01:47:13'),
+(815, 1, 'admin/sliders/1', 'PUT', '127.0.0.1', '{\"thumbnail_type\":\"0\",\"short_title\":\"dream wedding\",\"title\":\"To Know Us is to Love Us!\",\"description\":\"We would love to meet up and chat about how we can make YOUR DREAM wedding happen!\",\"btn_title\":\"Buy Now\",\"btn_url\":null,\"_token\":\"SexVjeXVpCIae3briQcewKSxunrXTVvQ7R3Sdeeu\",\"_method\":\"PUT\",\"_previous_\":\"http:\\/\\/localhost:8000\\/admin\\/sliders\"}', '2022-01-19 01:47:25', '2022-01-19 01:47:25'),
+(816, 1, 'admin/sliders', 'GET', '127.0.0.1', '[]', '2022-01-19 01:47:25', '2022-01-19 01:47:25'),
+(817, 1, 'admin/sliders', 'GET', '127.0.0.1', '[]', '2022-01-19 01:47:28', '2022-01-19 01:47:28'),
+(818, 1, 'admin/sliders/1/edit', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2022-01-19 01:47:43', '2022-01-19 01:47:43'),
+(819, 1, 'admin/sliders/1/edit', 'GET', '127.0.0.1', '[]', '2022-01-19 01:48:10', '2022-01-19 01:48:10'),
+(820, 1, 'admin/sliders/1/edit', 'GET', '127.0.0.1', '[]', '2022-01-19 01:49:40', '2022-01-19 01:49:40'),
+(821, 1, 'admin/sliders/1', 'PUT', '127.0.0.1', '{\"key\":\"0\",\"thumbnail\":\"_file_del_\",\"_file_del_\":null,\"_token\":\"SexVjeXVpCIae3briQcewKSxunrXTVvQ7R3Sdeeu\",\"_method\":\"PUT\"}', '2022-01-19 01:50:32', '2022-01-19 01:50:32'),
+(822, 1, 'admin/sliders/1', 'PUT', '127.0.0.1', '{\"thumbnail_type\":\"0\",\"short_title\":\"dream wedding\",\"title\":\"To Know Us is to Love Us!\",\"description\":\"We would love to meet up and chat about how we can make YOUR DREAM wedding happen!\",\"btn_title\":\"Buy Now\",\"btn_url\":null,\"_token\":\"SexVjeXVpCIae3briQcewKSxunrXTVvQ7R3Sdeeu\",\"_method\":\"PUT\"}', '2022-01-19 01:50:40', '2022-01-19 01:50:40'),
+(823, 1, 'admin/sliders', 'GET', '127.0.0.1', '[]', '2022-01-19 01:50:40', '2022-01-19 01:50:40'),
+(824, 1, 'admin/sliders', 'GET', '127.0.0.1', '[]', '2022-01-19 01:50:43', '2022-01-19 01:50:43'),
+(825, 1, 'admin/sliders/1/edit', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2022-01-19 01:50:52', '2022-01-19 01:50:52'),
+(826, 1, 'admin/sliders/1', 'PUT', '127.0.0.1', '{\"thumbnail_type\":\"0\",\"short_title\":\"dream wedding\",\"title\":\"To Know Us is to Love Us!\",\"description\":\"We would love to meet up and chat about how we can make YOUR DREAM wedding happen!\",\"btn_title\":\"Buy Now\",\"btn_url\":null,\"_token\":\"SexVjeXVpCIae3briQcewKSxunrXTVvQ7R3Sdeeu\",\"_method\":\"PUT\",\"_previous_\":\"http:\\/\\/localhost:8000\\/admin\\/sliders\"}', '2022-01-19 01:51:02', '2022-01-19 01:51:02'),
+(827, 1, 'admin/sliders', 'GET', '127.0.0.1', '[]', '2022-01-19 01:51:02', '2022-01-19 01:51:02'),
+(828, 1, 'admin/sliders', 'GET', '127.0.0.1', '[]', '2022-01-19 01:51:27', '2022-01-19 01:51:27'),
+(829, 1, 'admin/sliders/1/edit', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2022-01-19 01:51:35', '2022-01-19 01:51:35'),
+(830, 1, 'admin/sliders/1', 'PUT', '127.0.0.1', '{\"thumbnail_type\":\"0\",\"short_title\":null,\"title\":null,\"description\":null,\"btn_title\":\"Buy Now\",\"btn_url\":null,\"_token\":\"SexVjeXVpCIae3briQcewKSxunrXTVvQ7R3Sdeeu\",\"_method\":\"PUT\",\"_previous_\":\"http:\\/\\/localhost:8000\\/admin\\/sliders\"}', '2022-01-19 01:51:44', '2022-01-19 01:51:44'),
+(831, 1, 'admin/sliders', 'GET', '127.0.0.1', '[]', '2022-01-19 01:51:44', '2022-01-19 01:51:44'),
+(832, 1, 'admin/sliders/1/edit', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2022-01-19 01:57:53', '2022-01-19 01:57:53'),
+(833, 1, 'admin/sliders/1', 'PUT', '127.0.0.1', '{\"thumbnail_type\":\"0\",\"short_title\":null,\"title\":null,\"description\":null,\"btn_title\":\"Buy Now\",\"btn_url\":null,\"_token\":\"SexVjeXVpCIae3briQcewKSxunrXTVvQ7R3Sdeeu\",\"_method\":\"PUT\",\"_previous_\":\"http:\\/\\/localhost:8000\\/admin\\/sliders\"}', '2022-01-19 01:58:09', '2022-01-19 01:58:09'),
+(834, 1, 'admin/sliders', 'GET', '127.0.0.1', '[]', '2022-01-19 01:58:09', '2022-01-19 01:58:09'),
+(835, 1, 'admin/sliders/1/edit', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2022-01-19 01:58:31', '2022-01-19 01:58:31'),
+(836, 1, 'admin/sliders/1', 'PUT', '127.0.0.1', '{\"thumbnail_type\":\"0\",\"short_title\":\"aaa adasaaaa\",\"title\":null,\"description\":null,\"btn_title\":\"Buy Now\",\"btn_url\":null,\"_token\":\"SexVjeXVpCIae3briQcewKSxunrXTVvQ7R3Sdeeu\",\"_method\":\"PUT\",\"_previous_\":\"http:\\/\\/localhost:8000\\/admin\\/sliders\"}', '2022-01-19 01:58:40', '2022-01-19 01:58:40'),
+(837, 1, 'admin/sliders', 'GET', '127.0.0.1', '[]', '2022-01-19 01:58:40', '2022-01-19 01:58:40'),
+(838, 1, 'admin/sliders', 'GET', '127.0.0.1', '[]', '2022-01-19 02:00:34', '2022-01-19 02:00:34'),
+(839, 1, 'admin/sliders/1/edit', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2022-01-19 02:00:45', '2022-01-19 02:00:45'),
+(840, 1, 'admin/sliders/1', 'PUT', '127.0.0.1', '{\"thumbnail_type\":\"0\",\"short_title\":null,\"title\":null,\"description\":null,\"btn_title\":\"Buy Now\",\"btn_url\":null,\"_token\":\"SexVjeXVpCIae3briQcewKSxunrXTVvQ7R3Sdeeu\",\"_method\":\"PUT\",\"_previous_\":\"http:\\/\\/localhost:8000\\/admin\\/sliders\"}', '2022-01-19 02:00:50', '2022-01-19 02:00:50'),
+(841, 1, 'admin/sliders', 'GET', '127.0.0.1', '[]', '2022-01-19 02:00:50', '2022-01-19 02:00:50'),
+(842, 1, 'admin/sliders/1/edit', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2022-01-19 02:02:21', '2022-01-19 02:02:21'),
+(843, 1, 'admin/sliders/1', 'PUT', '127.0.0.1', '{\"thumbnail_type\":\"0\",\"short_title\":null,\"title\":null,\"description\":\"Phasellus a est. Etiam sit amet orci eget eros faucibus tincidunt. Aenean vulputate eleifend tellus. Phasellus consectetuer vestibulum elit. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim.\",\"btn_title\":\"Buy Now\",\"btn_url\":null,\"_token\":\"SexVjeXVpCIae3briQcewKSxunrXTVvQ7R3Sdeeu\",\"_method\":\"PUT\",\"_previous_\":\"http:\\/\\/localhost:8000\\/admin\\/sliders\"}', '2022-01-19 02:03:26', '2022-01-19 02:03:26'),
+(844, 1, 'admin/sliders', 'GET', '127.0.0.1', '[]', '2022-01-19 02:03:26', '2022-01-19 02:03:26'),
+(845, 1, 'admin/sliders/1/edit', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2022-01-19 02:03:37', '2022-01-19 02:03:37'),
+(846, 1, 'admin/sliders/1', 'PUT', '127.0.0.1', '{\"thumbnail_type\":\"0\",\"short_title\":null,\"title\":null,\"description\":\"Phasellus a est. Etiam sit amet orci eget eros faucibus tincidunt. Aenean vulputate eleifend tellus. Phasellus consectetuer vestibulum elit. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim.\",\"btn_title\":null,\"btn_url\":null,\"_token\":\"SexVjeXVpCIae3briQcewKSxunrXTVvQ7R3Sdeeu\",\"_method\":\"PUT\",\"_previous_\":\"http:\\/\\/localhost:8000\\/admin\\/sliders\"}', '2022-01-19 02:03:41', '2022-01-19 02:03:41'),
+(847, 1, 'admin/sliders', 'GET', '127.0.0.1', '[]', '2022-01-19 02:03:41', '2022-01-19 02:03:41'),
+(848, 1, 'admin/sliders/1/edit', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2022-01-19 02:04:48', '2022-01-19 02:04:48'),
+(849, 1, 'admin/sliders/1', 'PUT', '127.0.0.1', '{\"thumbnail_type\":\"0\",\"short_title\":null,\"title\":\"aaaaaa ddddddddd\",\"description\":null,\"btn_title\":null,\"btn_url\":null,\"_token\":\"SexVjeXVpCIae3briQcewKSxunrXTVvQ7R3Sdeeu\",\"_method\":\"PUT\",\"_previous_\":\"http:\\/\\/localhost:8000\\/admin\\/sliders\"}', '2022-01-19 02:04:55', '2022-01-19 02:04:55'),
+(850, 1, 'admin/sliders', 'GET', '127.0.0.1', '[]', '2022-01-19 02:04:55', '2022-01-19 02:04:55'),
+(851, 1, 'admin/sliders/1/edit', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2022-01-19 02:05:03', '2022-01-19 02:05:03'),
+(852, 1, 'admin/sliders/1', 'PUT', '127.0.0.1', '{\"thumbnail_type\":\"0\",\"short_title\":\"aaa adasaaaa\",\"title\":null,\"description\":null,\"btn_title\":null,\"btn_url\":null,\"_token\":\"SexVjeXVpCIae3briQcewKSxunrXTVvQ7R3Sdeeu\",\"after-save\":\"1\",\"_method\":\"PUT\",\"_previous_\":\"http:\\/\\/localhost:8000\\/admin\\/sliders\"}', '2022-01-19 02:05:10', '2022-01-19 02:05:10'),
+(853, 1, 'admin/sliders/1/edit', 'GET', '127.0.0.1', '[]', '2022-01-19 02:05:10', '2022-01-19 02:05:10'),
+(854, 1, 'admin/sliders/1', 'PUT', '127.0.0.1', '{\"thumbnail_type\":\"0\",\"short_title\":null,\"title\":null,\"description\":null,\"btn_title\":null,\"btn_url\":null,\"_token\":\"SexVjeXVpCIae3briQcewKSxunrXTVvQ7R3Sdeeu\",\"_method\":\"PUT\"}', '2022-01-19 02:05:20', '2022-01-19 02:05:20'),
+(855, 1, 'admin/sliders', 'GET', '127.0.0.1', '[]', '2022-01-19 02:05:21', '2022-01-19 02:05:21'),
+(856, 1, 'admin/portfolios', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2022-01-19 02:20:25', '2022-01-19 02:20:25'),
+(857, 1, 'admin/portfolios/1/edit', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2022-01-19 02:20:29', '2022-01-19 02:20:29'),
+(858, 1, 'admin/services', 'GET', '127.0.0.1', '[]', '2022-01-19 02:20:37', '2022-01-19 02:20:37'),
+(859, 1, 'admin/services/1/edit', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2022-01-19 02:20:43', '2022-01-19 02:20:43'),
+(860, 1, 'admin/portfolios', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2022-01-19 02:56:41', '2022-01-19 02:56:41'),
+(861, 1, 'admin/portfolios', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2022-01-19 02:56:44', '2022-01-19 02:56:44'),
+(862, 1, 'admin/packages', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2022-01-19 03:07:06', '2022-01-19 03:07:06'),
+(863, 1, 'admin/portfolios', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2022-01-19 03:07:08', '2022-01-19 03:07:08'),
+(864, 1, 'admin/portfolios/1/edit', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2022-01-19 03:07:11', '2022-01-19 03:07:11');
+INSERT INTO `admin_operation_log` (`id`, `user_id`, `path`, `method`, `ip`, `input`, `created_at`, `updated_at`) VALUES
+(865, 1, 'admin/portfolios/1', 'PUT', '127.0.0.1', '{\"package_id\":\"2\",\"name\":\"Eleanor & Stefano\",\"event_planner\":\"Rachel Starletta\",\"photographer_name\":\"Janet Lewis\",\"location\":\"Lakewood WA, USA\",\"description\":\"Quality vestibulum mollis accumsan ultricies. Sed urna velit, maximus eu tellus sit amet, condimentum dictum erat. Sed dolor ipsum, luctus quis est eu, vestibulum tincidunt est. Donec egestas aliquet nunc, ac egestas sapien fermentum in. Sed volutpat ac mi faucibus convallis. Praesent facilisis lobortis tellus. Donec laoreet, erat in sagittis dictum, enim enim dignissim sapien.\",\"videos\":{\"values\":[\"https:\\/\\/www.youtube.com\\/watch?v=mMw1hseXB3k\",\"https:\\/\\/www.youtube.com\\/watch?v=mMw1hseXB3k\",\"https:\\/\\/www.youtube.com\\/watch?v=mMw1hseXB3k\",\"https:\\/\\/www.youtube.com\\/watch?v=mMw1hseXB3k\"]},\"_token\":\"SexVjeXVpCIae3briQcewKSxunrXTVvQ7R3Sdeeu\",\"_method\":\"PUT\",\"_previous_\":\"http:\\/\\/localhost:8000\\/admin\\/portfolios\"}', '2022-01-19 03:11:57', '2022-01-19 03:11:57'),
+(866, 1, 'admin/portfolios', 'GET', '127.0.0.1', '[]', '2022-01-19 03:11:58', '2022-01-19 03:11:58'),
+(867, 1, 'admin/config', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2022-01-19 03:12:31', '2022-01-19 03:12:31'),
+(868, 1, 'admin/config/9/edit', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2022-01-19 03:12:39', '2022-01-19 03:12:39'),
+(869, 1, 'admin/config/9', 'PUT', '127.0.0.1', '{\"name\":\"website_title\",\"value\":\"Sketch Imagination Ltd\",\"description\":\"Website Title\",\"_token\":\"SexVjeXVpCIae3briQcewKSxunrXTVvQ7R3Sdeeu\",\"_method\":\"PUT\",\"_previous_\":\"http:\\/\\/localhost:8000\\/admin\\/config\"}', '2022-01-19 03:13:05', '2022-01-19 03:13:05'),
+(870, 1, 'admin/config', 'GET', '127.0.0.1', '[]', '2022-01-19 03:13:05', '2022-01-19 03:13:05'),
+(871, 1, 'admin/posts', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2022-01-19 04:07:37', '2022-01-19 04:07:37'),
+(872, 1, 'admin/tags', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2022-01-19 04:07:43', '2022-01-19 04:07:43'),
+(873, 1, 'admin/post-categories', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2022-01-19 04:07:43', '2022-01-19 04:07:43'),
+(874, 1, 'admin/post-categories', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2022-01-19 04:07:56', '2022-01-19 04:07:56'),
+(875, 1, 'admin/posts', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2022-01-19 04:07:58', '2022-01-19 04:07:58'),
+(876, 1, 'admin/posts', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2022-01-19 04:17:41', '2022-01-19 04:17:41'),
+(877, 1, 'admin/posts/create', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2022-01-19 04:17:45', '2022-01-19 04:17:45'),
+(878, 1, 'admin/posts/create', 'GET', '127.0.0.1', '[]', '2022-01-19 04:17:57', '2022-01-19 04:17:57'),
+(879, 1, 'admin/posts/create', 'GET', '127.0.0.1', '[]', '2022-01-19 04:19:10', '2022-01-19 04:19:10'),
+(880, 1, 'admin/posts/create', 'GET', '127.0.0.1', '[]', '2022-01-19 04:24:28', '2022-01-19 04:24:28'),
+(881, 1, 'admin/posts/create', 'GET', '127.0.0.1', '[]', '2022-01-19 04:24:43', '2022-01-19 04:24:43'),
+(882, 1, 'admin/posts', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2022-01-19 04:24:51', '2022-01-19 04:24:51'),
+(883, 1, 'admin/posts/1/edit', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2022-01-19 04:24:54', '2022-01-19 04:24:54'),
+(884, 1, 'admin/posts/1', 'PUT', '127.0.0.1', '{\"post_category_id\":\"1\",\"tags\":[\"1\",\"2\",null],\"title\":\"wfwerwer\",\"body\":\"<p>Vestibulum facilisis, purus nec pulvinar iaculis, ligula mi congue nunc, vitae euismod ligula urna in dolor. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Nulla porta dolor. Phasellus a est. Nullam sagittis.<\\/p><p><br><\\/p><p>Fusce fermentum. Sed fringilla mauris sit amet nibh. Etiam ultricies nisi vel augue. Curabitur suscipit suscipit tellus. Praesent turpis.<\\/p><p><br><\\/p><p>Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Etiam ultricies nisi vel augue. Maecenas egestas arcu quis ligula mattis placerat. Donec orci lectus, aliquam ut, faucibus non, euismod id, nulla. Quisque rutrum.<\\/p><p><br><\\/p><p>Curabitur a felis in nunc fringilla tristique. Nulla facilisi. Mauris turpis nunc, blandit et, volutpat molestie, porta ut, ligula. Pellentesque dapibus hendrerit tortor. Nunc interdum lacus sit amet orci.<\\/p><p><br><\\/p><p>Nam eget dui. Sed libero. Quisque libero metus, condimentum nec, tempor a, commodo mollis, magna. Etiam feugiat lorem non metus. Nullam nulla eros, ultricies sit amet, nonummy id, imperdiet feugiat, pede.<\\/p>\",\"display_order\":\"99999\",\"is_featured\":\"off\",\"is_published\":\"off\",\"created_by\":\"1\",\"_token\":\"SexVjeXVpCIae3briQcewKSxunrXTVvQ7R3Sdeeu\",\"_method\":\"PUT\",\"_previous_\":\"http:\\/\\/localhost:8000\\/admin\\/posts\"}', '2022-01-19 04:25:10', '2022-01-19 04:25:10'),
+(885, 1, 'admin/posts', 'GET', '127.0.0.1', '[]', '2022-01-19 04:25:10', '2022-01-19 04:25:10'),
+(886, 1, 'admin/posts', 'GET', '127.0.0.1', '[]', '2022-01-19 04:27:26', '2022-01-19 04:27:26'),
+(887, 1, 'admin/posts', 'GET', '127.0.0.1', '[]', '2022-01-19 04:27:41', '2022-01-19 04:27:41'),
+(888, 1, 'admin/posts', 'GET', '127.0.0.1', '[]', '2022-01-19 04:28:33', '2022-01-19 04:28:33'),
+(889, 1, 'admin/posts', 'GET', '127.0.0.1', '[]', '2022-01-19 05:20:35', '2022-01-19 05:20:35'),
+(890, 1, 'admin/posts', 'GET', '127.0.0.1', '[]', '2022-01-19 05:20:53', '2022-01-19 05:20:53'),
+(891, 1, 'admin/posts', 'GET', '127.0.0.1', '[]', '2022-01-19 05:23:53', '2022-01-19 05:23:53'),
+(892, 1, 'admin', 'GET', '127.0.0.1', '[]', '2022-01-20 06:31:37', '2022-01-20 06:31:37'),
+(893, 1, 'admin/portfolios', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2022-01-20 06:32:05', '2022-01-20 06:32:05'),
+(894, 1, 'admin/portfolios/1/edit', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2022-01-20 06:32:16', '2022-01-20 06:32:16'),
+(895, 1, 'admin/portfolios/1', 'PUT', '127.0.0.1', '{\"key\":\"0\",\"thumbnail\":\"_file_del_\",\"_file_del_\":null,\"_token\":\"PUT4H1UBoZJaztx2xCeb8aHAOLOi0X8SAdg7Y7cM\",\"_method\":\"PUT\"}', '2022-01-20 06:32:21', '2022-01-20 06:32:21'),
+(896, 1, 'admin/portfolios/1', 'PUT', '127.0.0.1', '{\"package_id\":\"2\",\"name\":\"Eleanor & Stefano\",\"event_planner\":\"Rachel Starletta\",\"photographer_name\":\"Janet Lewis\",\"location\":\"Lakewood WA, USA\",\"description\":\"Quality vestibulum mollis accumsan ultricies. Sed urna velit, maximus eu tellus sit amet, condimentum dictum erat. Sed dolor ipsum, luctus quis est eu, vestibulum tincidunt est. Donec egestas aliquet nunc, ac egestas sapien fermentum in. Sed volutpat ac mi faucibus convallis. Praesent facilisis lobortis tellus. Donec laoreet, erat in sagittis dictum, enim enim dignissim sapien.\",\"videos\":{\"values\":[\"https:\\/\\/www.youtube.com\\/watch?v=mMw1hseXB3k\",\"https:\\/\\/www.youtube.com\\/watch?v=mMw1hseXB3k\",\"https:\\/\\/www.youtube.com\\/watch?v=mMw1hseXB3k\",\"https:\\/\\/www.youtube.com\\/watch?v=mMw1hseXB3k\"]},\"_token\":\"PUT4H1UBoZJaztx2xCeb8aHAOLOi0X8SAdg7Y7cM\",\"_method\":\"PUT\",\"_previous_\":\"http:\\/\\/wedding.test\\/admin\\/portfolios\"}', '2022-01-20 06:33:28', '2022-01-20 06:33:28'),
+(897, 1, 'admin/portfolios', 'GET', '127.0.0.1', '[]', '2022-01-20 06:33:28', '2022-01-20 06:33:28'),
+(898, 1, 'admin/portfolios/create', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2022-01-20 06:39:44', '2022-01-20 06:39:44'),
+(899, 1, 'admin/portfolios', 'POST', '127.0.0.1', '{\"package_id\":\"3\",\"name\":\"Eleanor & Stefano\",\"event_planner\":\"Rachel Starletta\",\"photographer_name\":\"Janet Lewis\",\"location\":\"Lakewood WA, USA\",\"description\":\"Quality vestibulum mollis accumsan ultricies. Sed urna velit, maximus eu tellus sit amet, condimentum dictum erat. Sed dolor ipsum, luctus quis est eu, vestibulum tincidunt est. Donec egestas aliquet nunc, ac egestas sapien fermentum in. Sed volutpat ac mi faucibus convallis. Praesent facilisis lobortis tellus. Donec laoreet, erat in sagittis dictum, enim enim dignissim sapien.\",\"videos\":{\"values\":[null]},\"_token\":\"PUT4H1UBoZJaztx2xCeb8aHAOLOi0X8SAdg7Y7cM\",\"_previous_\":\"http:\\/\\/wedding.test\\/admin\\/portfolios\"}', '2022-01-20 06:40:47', '2022-01-20 06:40:47'),
+(900, 1, 'admin/portfolios/create', 'GET', '127.0.0.1', '[]', '2022-01-20 06:40:48', '2022-01-20 06:40:48'),
+(901, 1, 'admin/portfolios', 'POST', '127.0.0.1', '{\"package_id\":\"3\",\"name\":\"Freida & Pablo\",\"event_planner\":\"Rachel Starletta\",\"photographer_name\":\"Janet Lewis\",\"location\":\"Lakewood WA, USA\",\"description\":\"Quality vestibulum mollis accumsan ultricies. Sed urna velit, maximus eu tellus sit amet, condimentum dictum erat. Sed dolor ipsum, luctus quis est eu, vestibulum tincidunt est. Donec egestas aliquet nunc, ac egestas sapien fermentum in. Sed volutpat ac mi faucibus convallis. Praesent facilisis lobortis tellus. Donec laoreet, erat in sagittis dictum, enim enim dignissim sapien.\",\"videos\":{\"values\":[null]},\"_token\":\"PUT4H1UBoZJaztx2xCeb8aHAOLOi0X8SAdg7Y7cM\"}', '2022-01-20 06:41:52', '2022-01-20 06:41:52'),
+(902, 1, 'admin/portfolios', 'GET', '127.0.0.1', '[]', '2022-01-20 06:41:52', '2022-01-20 06:41:52'),
+(903, 1, 'admin/portfolios/create', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2022-01-20 06:41:55', '2022-01-20 06:41:55'),
+(904, 1, 'admin/portfolios', 'POST', '127.0.0.1', '{\"package_id\":\"4\",\"name\":\"Olivia & Enrico\",\"event_planner\":\"Rachel Starletta\",\"photographer_name\":\"Janet Lewis\",\"location\":\"Lakewood WA, USA\",\"description\":\"Quality vestibulum mollis accumsan ultricies. Sed urna velit, maximus eu tellus sit amet, condimentum dictum erat. Sed dolor ipsum, luctus quis est eu, vestibulum tincidunt est. Donec egestas aliquet nunc, ac egestas sapien fermentum in. Sed volutpat ac mi faucibus convallis. Praesent facilisis lobortis tellus. Donec laoreet, erat in sagittis dictum, enim enim dignissim sapien.\",\"videos\":{\"values\":[null]},\"_token\":\"PUT4H1UBoZJaztx2xCeb8aHAOLOi0X8SAdg7Y7cM\",\"_previous_\":\"http:\\/\\/wedding.test\\/admin\\/portfolios\"}', '2022-01-20 06:43:09', '2022-01-20 06:43:09'),
+(905, 1, 'admin/portfolios', 'GET', '127.0.0.1', '[]', '2022-01-20 06:43:09', '2022-01-20 06:43:09'),
+(906, 1, 'admin', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2022-01-20 06:51:27', '2022-01-20 06:51:27'),
+(907, 1, 'admin', 'GET', '127.0.0.1', '[]', '2022-01-20 07:52:41', '2022-01-20 07:52:41'),
+(908, 1, 'admin/portfolios', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2022-01-20 07:52:45', '2022-01-20 07:52:45'),
+(909, 1, 'admin/portfolios/create', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2022-01-20 07:52:49', '2022-01-20 07:52:49'),
+(910, 1, 'admin', 'GET', '127.0.0.1', '[]', '2022-01-25 04:56:03', '2022-01-25 04:56:03'),
+(911, 1, 'admin/sliders', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2022-01-25 04:56:09', '2022-01-25 04:56:09'),
+(912, 1, 'admin/sliders/1/edit', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2022-01-25 04:56:14', '2022-01-25 04:56:14'),
+(913, 1, 'admin/sliders/1', 'PUT', '127.0.0.1', '{\"key\":\"0\",\"thumbnail\":\"_file_del_\",\"_file_del_\":null,\"_token\":\"VmfWGvAMWcFLKbk7KADYRvj6wEWG6K2AWVTx4cNm\",\"_method\":\"PUT\"}', '2022-01-25 04:56:39', '2022-01-25 04:56:39'),
+(914, 1, 'admin/sliders/1', 'PUT', '127.0.0.1', '{\"thumbnail_type\":\"1\",\"short_title\":null,\"title\":null,\"description\":null,\"btn_title\":null,\"btn_url\":null,\"_token\":\"VmfWGvAMWcFLKbk7KADYRvj6wEWG6K2AWVTx4cNm\",\"_method\":\"PUT\",\"_previous_\":\"http:\\/\\/wedding.test\\/admin\\/sliders\"}', '2022-01-25 04:56:51', '2022-01-25 04:56:51'),
+(915, 1, 'admin/sliders', 'GET', '127.0.0.1', '[]', '2022-01-25 04:56:51', '2022-01-25 04:56:51'),
+(916, 1, 'admin/sliders', 'GET', '127.0.0.1', '[]', '2022-01-25 04:56:55', '2022-01-25 04:56:55'),
+(917, 1, 'admin/sliders', 'GET', '127.0.0.1', '[]', '2022-01-25 07:32:20', '2022-01-25 07:32:20'),
+(918, 1, 'admin/config', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2022-01-25 07:55:09', '2022-01-25 07:55:09'),
+(919, 1, 'admin/config/create', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2022-01-25 07:55:11', '2022-01-25 07:55:11'),
+(920, 1, 'admin/config', 'POST', '127.0.0.1', '{\"name\":\"facebook_page_id\",\"value\":\"872497166193591\",\"description\":\"Facebook Page ID\",\"_token\":\"VmfWGvAMWcFLKbk7KADYRvj6wEWG6K2AWVTx4cNm\",\"_previous_\":\"http:\\/\\/wedding.test\\/admin\\/config\"}', '2022-01-25 07:55:35', '2022-01-25 07:55:35'),
+(921, 1, 'admin/config', 'GET', '127.0.0.1', '[]', '2022-01-25 07:55:35', '2022-01-25 07:55:35'),
+(922, 1, 'admin/config/create', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2022-01-25 07:55:37', '2022-01-25 07:55:37'),
+(923, 1, 'admin/config', 'POST', '127.0.0.1', '{\"name\":\"facebook_app_id\",\"value\":\"484430926360436\",\"description\":\"Facebook App ID\",\"_token\":\"VmfWGvAMWcFLKbk7KADYRvj6wEWG6K2AWVTx4cNm\",\"_previous_\":\"http:\\/\\/wedding.test\\/admin\\/config\"}', '2022-01-25 07:56:04', '2022-01-25 07:56:04'),
+(924, 1, 'admin/config', 'GET', '127.0.0.1', '[]', '2022-01-25 07:56:04', '2022-01-25 07:56:04'),
+(925, 1, 'admin/config/create', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2022-01-25 07:56:06', '2022-01-25 07:56:06'),
+(926, 1, 'admin/config', 'POST', '127.0.0.1', '{\"name\":\"facebook_app_secret\",\"value\":\"1d70357827846e6a4bde7a9e3b8f9590\",\"description\":\"Facebook App Secret\",\"_token\":\"VmfWGvAMWcFLKbk7KADYRvj6wEWG6K2AWVTx4cNm\",\"_previous_\":\"http:\\/\\/wedding.test\\/admin\\/config\"}', '2022-01-25 07:56:30', '2022-01-25 07:56:30'),
+(927, 1, 'admin/config', 'GET', '127.0.0.1', '[]', '2022-01-25 07:56:30', '2022-01-25 07:56:30'),
+(928, 1, 'admin/config/create', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2022-01-25 07:57:22', '2022-01-25 07:57:22'),
+(929, 1, 'admin/config', 'POST', '127.0.0.1', '{\"name\":\"facebook_page_name\",\"value\":\"Creative Web Solution\",\"description\":\"Facebook Page Name\",\"_token\":\"VmfWGvAMWcFLKbk7KADYRvj6wEWG6K2AWVTx4cNm\",\"_previous_\":\"http:\\/\\/wedding.test\\/admin\\/config\"}', '2022-01-25 07:57:39', '2022-01-25 07:57:39'),
+(930, 1, 'admin/config', 'GET', '127.0.0.1', '[]', '2022-01-25 07:57:39', '2022-01-25 07:57:39'),
+(931, 1, 'admin/config/create', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2022-01-25 07:57:48', '2022-01-25 07:57:48'),
+(932, 1, 'admin/config', 'POST', '127.0.0.1', '{\"name\":\"facebook_page_access_token\",\"value\":\"EAAG4ll1Ir3QBACdsPpdrfhF3zcscFomEuhkTLEVH4hkAojOlXADuNYSR5JXYFhZCnHNQIaApC8jEIdGDjGKHet8mGMxtWTuuGl5mlaawZCq93CaQ1J6TYjTQGB25NrjYBFDR7O88HbwTPK8Ci7le6jXoFLCE1JGOP0ncvmRfuyKje7MV5lsKbCLHTHLJoZD\",\"description\":\"Facebook Page Access Token\",\"_token\":\"VmfWGvAMWcFLKbk7KADYRvj6wEWG6K2AWVTx4cNm\",\"_previous_\":\"http:\\/\\/wedding.test\\/admin\\/config\"}', '2022-01-25 07:58:18', '2022-01-25 07:58:18'),
+(933, 1, 'admin/config', 'GET', '127.0.0.1', '[]', '2022-01-25 07:58:19', '2022-01-25 07:58:19'),
+(934, 1, 'admin/config', 'GET', '127.0.0.1', '[]', '2022-01-25 22:31:38', '2022-01-25 22:31:38'),
+(935, 1, 'admin', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2022-01-25 23:04:18', '2022-01-25 23:04:18'),
+(936, 1, 'admin', 'GET', '127.0.0.1', '[]', '2022-01-25 23:05:59', '2022-01-25 23:05:59');
 
 -- --------------------------------------------------------
 
@@ -1103,8 +1266,8 @@ CREATE TABLE `packages` (
   `id` bigint(20) UNSIGNED NOT NULL,
   `name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `price` decimal(11,2) DEFAULT NULL,
-  `includes` text COLLATE utf8mb4_unicode_ci,
-  `body` text COLLATE utf8mb4_unicode_ci,
+  `includes` longtext COLLATE utf8mb4_unicode_ci,
+  `body` longtext COLLATE utf8mb4_unicode_ci,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
@@ -1163,9 +1326,9 @@ CREATE TABLE `portfolios` (
   `photographer_name` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `location` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `thumbnail` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `videos` text COLLATE utf8mb4_unicode_ci,
-  `pictures` text COLLATE utf8mb4_unicode_ci,
-  `description` text COLLATE utf8mb4_unicode_ci,
+  `videos` longtext COLLATE utf8mb4_unicode_ci,
+  `pictures` longtext COLLATE utf8mb4_unicode_ci,
+  `description` longtext COLLATE utf8mb4_unicode_ci,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
@@ -1175,7 +1338,9 @@ CREATE TABLE `portfolios` (
 --
 
 INSERT INTO `portfolios` (`id`, `package_id`, `name`, `event_planner`, `photographer_name`, `location`, `thumbnail`, `videos`, `pictures`, `description`, `created_at`, `updated_at`) VALUES
-(1, 2, 'Eleanor & Stefano', 'Rachel Starletta', 'Janet Lewis', 'Lakewood WA, USA', 'files/c1.jpg', '[\"https:\\/\\/www.youtube.com\\/watch?v=mMw1hseXB3k\",\"https:\\/\\/www.youtube.com\\/watch?v=mMw1hseXB3k\",\"https:\\/\\/www.youtube.com\\/watch?v=mMw1hseXB3k\",\"https:\\/\\/www.youtube.com\\/watch?v=mMw1hseXB3k\"]', '[\"images\\/c1.jpg\",\"images\\/c2.jpg\",\"images\\/c3.jpg\",\"images\\/c4.jpg\",\"images\\/c5.jpg\",\"images\\/c6.jpg\",\"images\\/c7.jpg\",\"images\\/c8.jpg\",\"images\\/c9.jpg\",\"images\\/g1.jpg\",\"images\\/g2.jpg\",\"images\\/g3.jpg\",\"images\\/g4.jpg\",\"images\\/g5.jpg\",\"images\\/g6.jpg\",\"images\\/g7.jpg\",\"images\\/g8.jpg\",\"images\\/g9.jpg\",\"images\\/g10.jpg\",\"images\\/19199603.jpg\"]', 'Quality vestibulum mollis accumsan ultricies. Sed urna velit, maximus eu tellus sit amet, condimentum dictum erat. Sed dolor ipsum, luctus quis est eu, vestibulum tincidunt est. Donec egestas aliquet nunc, ac egestas sapien fermentum in. Sed volutpat ac mi faucibus convallis. Praesent facilisis lobortis tellus. Donec laoreet, erat in sagittis dictum, enim enim dignissim sapien.', '2022-01-12 00:28:17', '2022-01-12 04:20:09');
+(1, 2, 'Eleanor & Stefano', 'Rachel Starletta', 'Janet Lewis', 'Lakewood WA, USA', 'files/5498eebdd90dd2479c5b41b143d21ee3.jpg', '[\"https:\\/\\/www.youtube.com\\/watch?v=mMw1hseXB3k\",\"https:\\/\\/www.youtube.com\\/watch?v=mMw1hseXB3k\",\"https:\\/\\/www.youtube.com\\/watch?v=mMw1hseXB3k\",\"https:\\/\\/www.youtube.com\\/watch?v=mMw1hseXB3k\"]', '[\"images\\/c1.jpg\",\"images\\/c2.jpg\",\"images\\/c3.jpg\",\"images\\/c4.jpg\",\"images\\/c5.jpg\",\"images\\/c6.jpg\",\"images\\/c7.jpg\",\"images\\/c8.jpg\",\"images\\/c9.jpg\",\"images\\/g1.jpg\",\"images\\/g2.jpg\",\"images\\/g3.jpg\",\"images\\/g4.jpg\",\"images\\/g5.jpg\",\"images\\/g6.jpg\",\"images\\/g7.jpg\",\"images\\/g8.jpg\",\"images\\/g9.jpg\",\"images\\/g10.jpg\",\"images\\/19199603.jpg\"]', 'Quality vestibulum mollis accumsan ultricies. Sed urna velit, maximus eu tellus sit amet, condimentum dictum erat. Sed dolor ipsum, luctus quis est eu, vestibulum tincidunt est. Donec egestas aliquet nunc, ac egestas sapien fermentum in. Sed volutpat ac mi faucibus convallis. Praesent facilisis lobortis tellus. Donec laoreet, erat in sagittis dictum, enim enim dignissim sapien.', '2022-01-12 00:28:17', '2022-01-20 06:33:28'),
+(3, 3, 'Freida & Pablo', 'Rachel Starletta', 'Janet Lewis', 'Lakewood WA, USA', 'files/6e040f83369e55c541cf6043c6826e7c.jpg', '[null]', '[\"images\\/96cf0c194a1068fbde055fc2f9387d7a.jpg\",\"images\\/dc1abc6474cc80635c7e153b96c13751.jpg\",\"images\\/4bbb798d8db4b1780f38968ef7ef603b.jpg\",\"images\\/eae8b93914b8d43275a82664399c33a7.jpg\",\"images\\/9dbca9bf9a518d652f01ea61605e6559.jpg\",\"images\\/c7ef1d03f92ae70628e03bb314ddd80b.jpg\",\"images\\/7c85a19d5f0e7bc148e4d0ae0342f3a4.jpg\",\"images\\/1c5135bf0329b49a5149f11d5eeea199.jpg\",\"images\\/d9f579150ec67f56cc3e9cf248920c36.jpg\",\"images\\/40f2613d45a2309c173bb0d23d113c08.jpg\",\"images\\/5500c63f1457e6e913059345bacde135.jpg\",\"images\\/038e6459ba419a377a7a5597f085676e.jpg\",\"images\\/6e62b8e66e5959412ec6fcf567bc179c.jpg\",\"images\\/8e867e93dfe12cd07ddb713f0276f211.jpg\"]', 'Quality vestibulum mollis accumsan ultricies. Sed urna velit, maximus eu tellus sit amet, condimentum dictum erat. Sed dolor ipsum, luctus quis est eu, vestibulum tincidunt est. Donec egestas aliquet nunc, ac egestas sapien fermentum in. Sed volutpat ac mi faucibus convallis. Praesent facilisis lobortis tellus. Donec laoreet, erat in sagittis dictum, enim enim dignissim sapien.', '2022-01-20 06:41:52', '2022-01-20 06:41:52'),
+(4, 4, 'Olivia & Enrico', 'Rachel Starletta', 'Janet Lewis', 'Lakewood WA, USA', 'files/c7587682d621616df17667630900e719.jpg', '[null]', '[\"images\\/57cefdd7de62a4890013c85e2816ffb3.jpg\",\"images\\/b09e30e0ce1a01e3eabf7269b5b005de.jpg\",\"images\\/1afb588bda1d9bb124acb6d4a704bcca.jpg\",\"images\\/89132b483c240c973b11dbedd973ea1a.jpg\",\"images\\/5cf1a410f9cb6a6e2f4adb20f8d21023.jpg\",\"images\\/cdcc54b949a85ec0a0653e09a454e729.jpg\",\"images\\/e90a0883951a4e844ab6bb3557a8431e.jpg\",\"images\\/237d8b4951d866a8de718a7a0da1c6d3.jpg\",\"images\\/e9c4c066a73cb56db67ff1bcb0866d4d.jpg\",\"images\\/3e7dbb1b0d317d0669879ca1fad6e426.jpg\",\"images\\/f8278703a09d80be0dc919a1bdea155d.jpg\",\"images\\/c00bffb99de4c0029503b048a13f01e2.jpg\",\"images\\/55093914729a7dbaaed5196135d29bf5.jpg\",\"images\\/10e01f0d7d44e6894e8210003cfbece9.jpg\",\"images\\/537db25d82f335e301ed86c5ac270a6e.jpg\",\"images\\/0de0b9f6f17917012ef3194d1065107c.jpg\",\"images\\/1408a5e41b73053a9fd045dbdee40463.jpg\",\"images\\/55e5c82a8aae5748e28bdf5492f4f5f0.jpg\",\"images\\/ba6693627b2f828d10ef26effba15c1c.jpg\"]', 'Quality vestibulum mollis accumsan ultricies. Sed urna velit, maximus eu tellus sit amet, condimentum dictum erat. Sed dolor ipsum, luctus quis est eu, vestibulum tincidunt est. Donec egestas aliquet nunc, ac egestas sapien fermentum in. Sed volutpat ac mi faucibus convallis. Praesent facilisis lobortis tellus. Donec laoreet, erat in sagittis dictum, enim enim dignissim sapien.', '2022-01-20 06:43:09', '2022-01-20 06:43:09');
 
 -- --------------------------------------------------------
 
@@ -1187,8 +1352,13 @@ CREATE TABLE `posts` (
   `id` bigint(20) UNSIGNED NOT NULL,
   `post_category_id` bigint(20) UNSIGNED NOT NULL,
   `title` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `body` text COLLATE utf8mb4_unicode_ci,
+  `slug` varchar(222) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `body` longtext COLLATE utf8mb4_unicode_ci,
   `thumbnail` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `is_featured` tinyint(1) DEFAULT '0',
+  `is_published` tinyint(1) DEFAULT '0',
+  `display_order` int(11) DEFAULT '99999',
+  `created_by` varchar(244) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
@@ -1197,9 +1367,9 @@ CREATE TABLE `posts` (
 -- Dumping data for table `posts`
 --
 
-INSERT INTO `posts` (`id`, `post_category_id`, `title`, `body`, `thumbnail`, `created_at`, `updated_at`) VALUES
-(1, 1, 'wfwerwer', '<p>werwer</p>', 'files/fb0e9c71bc1e3482fb23f6f255c8492b.jpg', '2022-01-15 22:56:54', '2022-01-15 22:56:54'),
-(2, 1, 'ewwe', '<p>wewewe</p>', 'files/g3.jpg', '2022-01-15 23:48:44', '2022-01-15 23:48:55');
+INSERT INTO `posts` (`id`, `post_category_id`, `title`, `slug`, `body`, `thumbnail`, `is_featured`, `is_published`, `display_order`, `created_by`, `created_at`, `updated_at`) VALUES
+(1, 1, 'wfwerwer', NULL, '<p>Vestibulum facilisis, purus nec pulvinar iaculis, ligula mi congue nunc, vitae euismod ligula urna in dolor. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Nulla porta dolor. Phasellus a est. Nullam sagittis.</p><p><br></p><p>Fusce fermentum. Sed fringilla mauris sit amet nibh. Etiam ultricies nisi vel augue. Curabitur suscipit suscipit tellus. Praesent turpis.</p><p><br></p><p>Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Etiam ultricies nisi vel augue. Maecenas egestas arcu quis ligula mattis placerat. Donec orci lectus, aliquam ut, faucibus non, euismod id, nulla. Quisque rutrum.</p><p><br></p><p>Curabitur a felis in nunc fringilla tristique. Nulla facilisi. Mauris turpis nunc, blandit et, volutpat molestie, porta ut, ligula. Pellentesque dapibus hendrerit tortor. Nunc interdum lacus sit amet orci.</p><p><br></p><p>Nam eget dui. Sed libero. Quisque libero metus, condimentum nec, tempor a, commodo mollis, magna. Etiam feugiat lorem non metus. Nullam nulla eros, ultricies sit amet, nonummy id, imperdiet feugiat, pede.</p>', 'files/c0c2a0035cdb4760d5b323e82245ae3b.jpg', 0, 0, 99999, '1', '2022-01-15 22:56:54', '2022-01-19 04:25:10'),
+(2, 1, 'ewwe', NULL, '<p>wewewe</p>', 'files/g3.jpg', 0, 0, 99999, NULL, '2022-01-15 23:48:44', '2022-01-15 23:48:55');
 
 -- --------------------------------------------------------
 
@@ -1254,7 +1424,7 @@ CREATE TABLE `services` (
   `id` bigint(20) UNSIGNED NOT NULL,
   `service_category_id` bigint(20) UNSIGNED DEFAULT NULL,
   `title` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `body` text COLLATE utf8mb4_unicode_ci,
+  `body` longtext COLLATE utf8mb4_unicode_ci,
   `thumbnail` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
@@ -1311,7 +1481,7 @@ CREATE TABLE `sliders` (
 --
 
 INSERT INTO `sliders` (`id`, `short_title`, `title`, `description`, `thumbnail`, `thumbnail_type`, `btn_url`, `btn_title`, `created_at`, `updated_at`) VALUES
-(1, 'dream wedding', 'To Know Us is to Love Us!', 'We would love to meet up and chat about how we can make YOUR DREAM wedding happen!', 'files/pwe.mp4', 1, NULL, 'Buy Now', '2022-01-10 23:13:22', '2022-01-10 23:17:30'),
+(1, NULL, NULL, NULL, 'files/aa59a6cddebbf1b1a3164fdb374ace27.mp4', 1, NULL, NULL, '2022-01-10 23:13:22', '2022-01-25 04:56:51'),
 (2, 'dream maker', 'Your Personal Dream Maker', 'We believe that it is all about the BIG DREAMS and the small details!', 'files/02.jpg', 0, NULL, 'Buy Now', '2022-01-10 23:14:24', '2022-01-10 23:17:35'),
 (3, 'planing dream', 'Destination Wedding Planner', 'No matter your dreams - we can assist you in planning your PWE WEDDINGS & EVENTS.', 'files/03.jpg', 0, NULL, NULL, '2022-01-10 23:14:55', '2022-01-10 23:14:55');
 
@@ -1530,7 +1700,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `admin_config`
 --
 ALTER TABLE `admin_config`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
 -- AUTO_INCREMENT for table `admin_menu`
@@ -1542,7 +1712,7 @@ ALTER TABLE `admin_menu`
 -- AUTO_INCREMENT for table `admin_operation_log`
 --
 ALTER TABLE `admin_operation_log`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=780;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=937;
 
 --
 -- AUTO_INCREMENT for table `admin_permissions`
@@ -1590,7 +1760,7 @@ ALTER TABLE `personal_access_tokens`
 -- AUTO_INCREMENT for table `portfolios`
 --
 ALTER TABLE `portfolios`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `posts`
@@ -1602,7 +1772,7 @@ ALTER TABLE `posts`
 -- AUTO_INCREMENT for table `post_categories`
 --
 ALTER TABLE `post_categories`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `post_tag`
