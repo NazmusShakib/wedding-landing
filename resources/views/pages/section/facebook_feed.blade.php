@@ -13,8 +13,11 @@
                     $facebook_app_id=config('facebook_app_id');
                     $facebook_app_secret=config('facebook_app_secret');
                     $facebook_page_access_token=config('facebook_page_access_token');
-                    //echo file_get_contents('https://graph.facebook.com/v3.2/oauth/access_token?grant_type=fb_exchange_token&client_id='.$facebook_app_id.'&client_secret='.$facebook_app_secret.'&fb_exchange_token='.$facebook_page_access_token);
                     $api_version = "v12.0";
+
+                    // echo file_get_contents('https://graph.facebook.com/'.$api_version.'/oauth/access_token?grant_type=fb_exchange_token&client_id='.$facebook_app_id.'&client_secret='.$facebook_app_secret.'&fb_exchange_token='.$facebook_page_access_token);
+                    // exit;
+                    
                     $fields = "id,attachments,message,created_time";
                     // $fields = "id,attachments,message,picture,icon,created_time,from,story,likes.limit(0).summary(true),comments.limit(0).summary(true)";
                     $limit = 10;
