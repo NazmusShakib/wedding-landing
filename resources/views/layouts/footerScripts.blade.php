@@ -41,43 +41,6 @@
   }(document, 'script', 'facebook-jssdk'));
 </script>
 
-
-{{-- <script>
-    var url = 'https://wati-integration-service.clare.ai/ShopifyWidget/shopifyWidget.js?73096';
-    var s = document.createElement('script');
-    s.type = 'text/javascript';
-    s.async = true;
-    s.src = url;
-    var options = {
-  "enabled":true,
-  "chatButtonSetting":{
-      "backgroundColor":"#4dc247",
-      "ctaText":"",
-      "borderRadius":"25",
-      "marginLeft":"0",
-      "marginBottom":"100",
-      "marginRight":"25",
-      "position":"right"
-  },
-  "brandSetting":{
-      "brandName":"Sketch Imagination Ltd",
-      "brandSubTitle":"Typically replies within a day",
-      "brandImg":"https://sketch.dotcodes.org/images/sketch-logo-white.png",
-      "welcomeText":"Hi there!\nHow can I help you?",
-      "messageText":"Hello, I have a question about",
-      "backgroundColor":"#0a5f54",
-      "ctaText":"Start Chat",
-      "borderRadius":"25",
-      "autoShow":false,
-      "phoneNumber":"8801717293722"
-  }
-};
-    s.onload = function() {
-        CreateWhatsappChatWidget(options);
-    };
-    var x = document.getElementsByTagName('script')[0];
-    x.parentNode.insertBefore(s, x);
-</script> --}}
 <script src="https://apps.elfsight.com/p/platform.js" defer></script>
 <div class="elfsight-app-98528b37-adf5-4939-b459-673240c79542"></div>
 @stack('js')
