@@ -35,7 +35,7 @@
                                 </div>
                             </div>
                           </div>
-                          <div class="carousel-item">
+                          {{-- <div class="carousel-item">
                             <img style="min-height: 400px;" class="d-block w-100" src="images/topbanner-1.jpg" alt="Second slide">
                             <div class="carousel-caption d-none d-md-block" >
                                 <div style="display: inline-block;padding: 20px;padding-bottom: 0;border-radius: 5px;background-color: rgba(0,0,0,0.5);margin-bottom:20px;">
@@ -52,7 +52,7 @@
                                     <p class="text-white">{!! config('office_address') !!}</p>
                                 </div>
                             </div>
-                          </div>
+                          </div> --}}
                         </div>
                       </div>
                     {{-- <div class="line p-30">
