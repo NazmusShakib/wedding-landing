@@ -18,3 +18,5 @@ Route::get('service/{id}/details/{slug}', 'PublicController@serviceDetails')->na
 Route::get('package/{id}/details/{slug}', 'PublicController@packageDetails')->name('package.details');
 Route::get('portfolio/{id}/details/{slug}', 'PublicController@portfolioDetails')->name('portfolio.details');
 Route::get('post/{id}/details/{slug}', 'PublicController@postDetails')->name('post.details');
+Route::get('get/facebook/login/url', 'FacebookAccessManageController@getFacebookLoginUrl')->name('getFacebookLoginUrl');
+Route::get('get/facebook/callback/url', 'FacebookAccessManageController@getFacebookCallbackUrl')->name('getFacebookCallbackUrl');

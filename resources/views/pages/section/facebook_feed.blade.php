@@ -16,8 +16,6 @@
                     $api_version = "v12.0";
 
                     //$fb_exchange_token = file_get_contents('https://graph.facebook.com/oauth/access_token?client_id='.$facebook_app_id.'&client_secret='.$facebook_app_secret.'&grant_type=client_credentials');
-
-
                     //echo file_get_contents('https://graph.facebook.com/'.$api_version.'/oauth/access_token?grant_type=fb_exchange_token&client_id='.$facebook_app_id.'&client_secret='.$facebook_app_secret.'&fb_exchange_token='.$facebook_page_access_token);
                     //exit;
                     
