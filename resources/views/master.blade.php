@@ -9,17 +9,16 @@
         @media(max-width:767px){
             .mobile-top-logo {
                 position: absolute;
-                /* margin: 0px 0px 0px 0%; */
                 z-index: 9999;
-                cursor: pointer;
-                opacity: 1;
-                padding: 10px 30% 25px 45%;
-                -webkit-transition: 0.5s;
-                -o-transition: 0.5s;
-                transition: 0.5s;
-                display: block;
-                /* height: 8%; */
-                /* width: 50%;
+                display: inherit;
+                width: 100%;
+                height: 140px;
+                text-align: center;
+                z-index: 999;
+            }
+            .mobile-top-logo img{
+                padding-top: 10px;
+                max-width: 120px;
             }
         }
     </style>
@@ -27,7 +26,10 @@
 <body>
     <div id="pwe-page"> 
         <a href="#" class="js-pwe-nav-toggle pwe-nav-toggle"><i></i></a>
-        <img class="mobile-top-logo" src="{{ asset('images/sketch-logo-black.png') }}" alt="Logo">
+        <div class="mobile-top-logo">
+            <img src="{{ asset('images/sketch-logo-black.png') }}" alt="Logo">
+        </div>
+        
         {{-- <div id="myid" class="img"></div> --}}
         
         @include('layouts.sidebar')
