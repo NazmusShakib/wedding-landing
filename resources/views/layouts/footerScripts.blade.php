@@ -44,5 +44,6 @@
 </script>
 
 <script src="https://apps.elfsight.com/p/platform.js" defer></script>
-<div class="elfsight-app-98528b37-adf5-4939-b459-673240c79542"></div>
+<div class="elfsight-app-c9df5312-1de6-402e-b4f0-183b2abf8a92"></div>
+
 @stack('js')

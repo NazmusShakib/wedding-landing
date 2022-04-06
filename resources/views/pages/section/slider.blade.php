@@ -5,7 +5,7 @@
                 @if(1 == $slider['thumbnail_type'])
                     <li>
                         <div class="overlay-video">
-                            <video autoplay muted playsinline>
+                            <video autoplay muted playsinline loop>
                                 <source src="{{ Storage::url($slider['thumbnail']) }}" type="video/mp4">
                             </video>
                         </div><div class="overlay-color"></div>
