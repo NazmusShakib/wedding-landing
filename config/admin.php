@@ -11,7 +11,7 @@ return [
     | login page.
     |
     */
-    'name' => 'Sketch Imagination',
+    'name' => 'Mirpur Cultural Convention Hall',
 
     /*
     |--------------------------------------------------------------------------
@@ -22,7 +22,7 @@ return [
     | `img` tag, eg '<img src="http://logo-url" alt="Admin logo">'.
     |
     */
-    'logo' => '<b>S</b>Ketch <b>I</b>magination',
+    'logo' => '<b>C</b>ultural <b>C</b>onvention',
 
     /*
     |--------------------------------------------------------------------------
@@ -34,7 +34,7 @@ return [
     | '<img src="http://logo-url" alt="Admin logo">'.
     |
     */
-    'logo-mini' => '<b>S</b>',
+    'logo-mini' => '<b>MCCH</b>',
 
     /*
     |--------------------------------------------------------------------------
@@ -223,7 +223,7 @@ return [
          * or specific method to path like: get:admin/auth/logs.
          */
         'except' => [
-            env('ADMIN_ROUTE_PREFIX', 'admin').'/auth/logs*',
+            env('ADMIN_ROUTE_PREFIX', 'admin') . '/auth/logs*',
         ],
     ],
 
@@ -348,9 +348,7 @@ return [
     'minify_assets' => [
 
         // Assets will not be minified.
-        'excepts' => [
-
-        ],
+        'excepts' => [],
 
     ],
 
@@ -412,32 +410,32 @@ return [
                 'modules' => [
                     'syntax' => true,
                     'toolbar' =>
-                        [
-                            ['size' => []],
-                            ['header' => []],
-                            'bold',
-                            'italic',
-                            'underline',
-                            'strike',
-                            ['script' => 'super'],
-                            ['script' => 'sub'],
-                            ['color' => []],
-                            ['background' => []],
-                            'blockquote',
-                            'code-block',
-                            ['list' => 'ordered'],
-                            ['list' => 'bullet'],
-                            ['indent' => '-1'],
-                            ['indent' => '+1'],
-                            'direction',
-                            ['align' => []],
-                            'link',
-                            'image',
-                            'video',
-                            'formula',
-                            'clean'
-                        ],
-                        // "htmlEditButton" => ["syntax" => true, "debug" => true]
+                    [
+                        ['size' => []],
+                        ['header' => []],
+                        'bold',
+                        'italic',
+                        'underline',
+                        'strike',
+                        ['script' => 'super'],
+                        ['script' => 'sub'],
+                        ['color' => []],
+                        ['background' => []],
+                        'blockquote',
+                        'code-block',
+                        ['list' => 'ordered'],
+                        ['list' => 'bullet'],
+                        ['indent' => '-1'],
+                        ['indent' => '+1'],
+                        'direction',
+                        ['align' => []],
+                        'link',
+                        'image',
+                        'video',
+                        'formula',
+                        'clean'
+                    ],
+                    // "htmlEditButton" => ["syntax" => true, "debug" => true]
                 ],
                 'theme' => 'snow',
                 'height' => '200px',
