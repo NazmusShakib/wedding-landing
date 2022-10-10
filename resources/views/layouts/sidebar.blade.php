@@ -3,7 +3,7 @@
     <!-- Logo -->
     <h1 id="pwe-logo">
         <a href="{{ route('page', '/') }}">
-            <img src="{{ asset('images/sketch-logo-black.png') }}" alt="Logo">
+            <img src="{{ asset('images/logo-with-text-mirpur-cultural-convention-center.jpeg') }}" alt="Logo">
         </a>
     </h1>
     <!-- Menu -->
