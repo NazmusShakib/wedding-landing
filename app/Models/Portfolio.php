@@ -11,8 +11,8 @@ class Portfolio extends Model
     use HasFactory;
 
     protected $casts = [
-        'videos' =>'json',
-        'pictures' =>'json',
+        'videos' => 'json',
+        'pictures' => 'json',
     ];
 
     public function setPicturesAttribute($pictures)
@@ -30,6 +30,16 @@ class Portfolio extends Model
     public function package()
     {
         return $this->belongsTo(Package::class, 'package_id');
+    }
+
+    public function scopePublished($query)
+    {
+        return $query->where('is_published', true);
+    }
+
+    public function scopeFeatured($query)
+    {
+        return $query->where('is_featured', true);
     }
 
     public function scopeDescOrdered($query)

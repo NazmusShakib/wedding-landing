@@ -29,7 +29,7 @@ class PostController extends AdminController
     {
         $grid = new Grid(new Post());
         $grid->column('id', __('ID'))->sortable();
-        $grid->column('thumbnail', __('Thumbnail'))->image(config('app.url').'/storage/', 100, 100);
+        $grid->column('thumbnail', __('Thumbnail'))->image(config('app.url') . '/storage/', 100, 100);
         $grid->column('post_category_id', __('Category'))->display(function () {
             return $this->category->name;
         });
@@ -67,7 +67,6 @@ class PostController extends AdminController
             $filter->like("title", "Title");
             $filter->like("category.name", "Category");
             $filter->between('created_at', 'Created At')->datetime();
-
         });
 
         return $grid;
@@ -97,8 +96,8 @@ class PostController extends AdminController
     {
         $form = new Form(new Post());
         $form->select('post_category_id', 'Category')
-        ->options(PostCategory::all()->pluck('name','id'));
-        $form->multipleSelect('tags','Tag')->options(Tag::all()->pluck('name','id'));
+            ->options(PostCategory::all()->pluck('name', 'id'));
+        $form->multipleSelect('tags', 'Tag')->options(Tag::all()->pluck('name', 'id'));
         $form->text('title', 'Title')->rules('required|max:255');
         $form->quill('body');
         $form->file('thumbnail')->rules('mimes:png,jpeg,jpg,mp4,avi')

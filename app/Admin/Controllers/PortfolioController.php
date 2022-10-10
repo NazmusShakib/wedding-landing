@@ -27,7 +27,7 @@ class PortfolioController extends AdminController
     {
         $grid = new Grid(new Portfolio());
         $grid->column('id', __('ID'))->sortable();
-        $grid->column('thumbnail', __('Thumbnail'))->image(config('app.url').'/storage/', 100, 100);
+        $grid->column('thumbnail', __('Thumbnail'))->image(config('app.url') . '/storage/', 100, 100);
         $grid->column('package_id', __('Package'))->display(function () {
             return $this->package->name;
         });
@@ -35,12 +35,26 @@ class PortfolioController extends AdminController
         $grid->column('event_planner', __('Planner Name'));
         $grid->column('photographer_name', __('Photographer Name'));
         $grid->column('location', __('Location'));
-        $grid->column('created_at', __('Created at'))->display(function () {
+        $grid->column("is_published", __("Published"))->display(function ($val) {
+            if ($val == 1) {
+                return '<span class="label label-success">Yes</span>';
+            } else {
+                return '<span class="label label-danger">No</span>';
+            }
+        });
+        /* $grid->column("is_featured", __("Featured"))->display(function ($val) {
+            if ($val == 1) {
+                return '<span class="label label-success">Yes</span>';
+            } else {
+                return '<span class="label label-danger">No</span>';
+            }
+        }); */
+        /* $grid->column('created_at', __('Created at'))->display(function () {
             return date('d/F/Y h:i a', strtotime($this->created_at));
         });
         $grid->column('updated_at', __('Updated at'))->display(function () {
             return date('d/F/Y h:i a', strtotime($this->updated_at));
-        });
+        }); */
         return $grid;
     }
 
@@ -66,7 +80,7 @@ class PortfolioController extends AdminController
     {
         $form = new Form(new Portfolio());
         $form->select('package_id', 'Package')->rules('required')
-            ->options(Package::all()->pluck('name','id'));
+            ->options(Package::all()->pluck('name', 'id'));
         $form->text('name', 'Name')->rules('required|max:255');
         $form->text('event_planner', 'Planner Name');
         $form->text('photographer_name', 'Photographer Name');
@@ -77,6 +91,8 @@ class PortfolioController extends AdminController
         $form->list('videos', 'Videos');
         $form->multipleImage('pictures')->rules('mimes:jpeg,jpg,png')
             ->uniqueName()->removable()->downloadable();
+        //$form->switch('is_featured', __("Is Featured"));
+        $form->switch('is_published', __("Is Published"));
         return $form;
     }
 }
