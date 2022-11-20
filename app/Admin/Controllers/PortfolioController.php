@@ -27,7 +27,7 @@ class PortfolioController extends AdminController
     {
         $grid = new Grid(new Portfolio());
         $grid->column('id', __('ID'))->sortable();
-        $grid->column('thumbnail', __('Thumbnail'))->image(config('app.url').'/storage/', 100, 100);
+        $grid->column('thumbnail', __('Thumbnail'))->image(config('app.url') . '/storage/', 100, 100);
         $grid->column('package_id', __('Package'))->display(function () {
             return $this->package->name;
         });
@@ -66,7 +66,7 @@ class PortfolioController extends AdminController
     {
         $form = new Form(new Portfolio());
         $form->select('package_id', 'Package')->rules('required')
-            ->options(Package::all()->pluck('name','id'));
+            ->options(Package::all()->pluck('name', 'id'));
         $form->text('name', 'Name')->rules('required|max:255');
         $form->text('event_planner', 'Planner Name');
         $form->text('photographer_name', 'Photographer Name');
@@ -74,7 +74,7 @@ class PortfolioController extends AdminController
         $form->textarea('description')->rules('required')->rows(5);
         $form->file('thumbnail')->rules('required|mimes:jpeg,jpg,png')
             ->uniqueName()->removable()->downloadable();
-        $form->list('videos', 'Videos');
+        /* $form->list('videos', 'Videos'); */
         $form->multipleImage('pictures')->rules('mimes:jpeg,jpg,png')
             ->uniqueName()->removable()->downloadable();
         return $form;
