@@ -13,6 +13,7 @@ Route::group([
     $router->get('/', 'HomeController@index')->name('home');
     $router->resource('sliders', SliderController::class);
     $router->resource('services', ServiceController::class);
+    $router->resource('clients', ClientController::class);
     $router->resource('service-categories', ServiceCategoryController::class);
     $router->resource('packages', PackageController::class);
     $router->resource('portfolios', PortfolioController::class);

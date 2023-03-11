@@ -3,7 +3,7 @@
         <div class="row">
             <div class="col-sm-6 col-xs-12 col-lg-4 animate-box" data-animate-effect="fadeInLeft">
                 <h2>
-                    <img style="width: 180px;" src="{{ asset('images/sketch-logo-white.png') }}" alt="Logo">
+                    <img style="width: 180px" src="{{ url(config('logo_secondary')) }}" alt="sketchimagination">
                 </h2>
                 <div class="social" style="margin-bottom: 30px;"> 
                     <a {{ (filter_var(config('social_facebook_url'), FILTER_VALIDATE_URL)) ? 'target="_blank"' : '' }} href="{!! config('social_facebook_url') !!}"><i class="ti-facebook"></i></a>

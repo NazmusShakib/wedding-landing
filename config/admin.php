@@ -223,7 +223,7 @@ return [
          * or specific method to path like: get:admin/auth/logs.
          */
         'except' => [
-            env('ADMIN_ROUTE_PREFIX', 'admin').'/auth/logs*',
+            env('ADMIN_ROUTE_PREFIX', 'admin') . '/auth/logs*',
         ],
     ],
 
@@ -348,9 +348,7 @@ return [
     'minify_assets' => [
 
         // Assets will not be minified.
-        'excepts' => [
-
-        ],
+        'excepts' => [],
 
     ],
 
@@ -405,6 +403,12 @@ return [
     |
     */
     'extensions' => [
+        'media-manager' => [
+
+            // Select a local disk that you configured in `config/filesystem.php`
+            'disk' => 'public',
+            'allowed_ext' => 'jpg,jpeg,png,pdf,doc,docx,zip'
+        ],
         'quill' => [
             // If the value is set to false, this extension will be disabled
             'enable' => true,
@@ -412,32 +416,32 @@ return [
                 'modules' => [
                     'syntax' => true,
                     'toolbar' =>
-                        [
-                            ['size' => []],
-                            ['header' => []],
-                            'bold',
-                            'italic',
-                            'underline',
-                            'strike',
-                            ['script' => 'super'],
-                            ['script' => 'sub'],
-                            ['color' => []],
-                            ['background' => []],
-                            'blockquote',
-                            'code-block',
-                            ['list' => 'ordered'],
-                            ['list' => 'bullet'],
-                            ['indent' => '-1'],
-                            ['indent' => '+1'],
-                            'direction',
-                            ['align' => []],
-                            'link',
-                            'image',
-                            'video',
-                            'formula',
-                            'clean'
-                        ],
-                        // "htmlEditButton" => ["syntax" => true, "debug" => true]
+                    [
+                        ['size' => []],
+                        ['header' => []],
+                        'bold',
+                        'italic',
+                        'underline',
+                        'strike',
+                        ['script' => 'super'],
+                        ['script' => 'sub'],
+                        ['color' => []],
+                        ['background' => []],
+                        'blockquote',
+                        'code-block',
+                        ['list' => 'ordered'],
+                        ['list' => 'bullet'],
+                        ['indent' => '-1'],
+                        ['indent' => '+1'],
+                        'direction',
+                        ['align' => []],
+                        'link',
+                        'image',
+                        'video',
+                        'formula',
+                        'clean'
+                    ],
+                    // "htmlEditButton" => ["syntax" => true, "debug" => true]
                 ],
                 'theme' => 'snow',
                 'height' => '200px',

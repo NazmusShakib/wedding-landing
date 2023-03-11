@@ -29,5 +29,5 @@
         </div>
     </div>
 </div>
-@include('pages.section.clients')
+<x-client-component/>
 @stop

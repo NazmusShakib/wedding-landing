@@ -21,21 +21,17 @@
                 <div class="col-lg-12 mb-30">
                     <div style="height: 700px;" id="carouselExampleControls" class="carousel slide" data-ride="carousel">
                         <ol class="carousel-indicators">
-                            <li data-target="#carouselExampleControls" data-slide-to="0" class="active"></li>
-                            <li data-target="#carouselExampleControls" data-slide-to="1"></li>
-                            <li data-target="#carouselExampleControls" data-slide-to="2"></li>
+                            @foreach($sliders as $key => $slide)
+                            <li data-target="#carouselExampleControls" data-slide-to="{{ $key }}" class="{{ ($key == 0) ? 'active' : ''}}"></li>
+                            @endforeach
                           </ol>
                         <div class="carousel-inner" style="height: 100%;">
-                          <div class="carousel-item active" style="height: 100%;">
-                            <img style="min-height: 700px;" class="d-block w-100" src="images/contact-us-1.jpg" alt="First slide">
-                            {{-- <div class="carousel-caption d-none d-md-block">
-                                <div style="display: inline-block;padding: 20px;padding-bottom: 0;border-radius: 5px;background-color: rgba(0,0,0,0.5); margin-bottom:20px;">
-                                    <h5 class="text-white"><i class="ti-location-pin"></i> <b class="text-white">Bangladesh</b></h5>
-                                    <p class="text-white">{!! config('office_address') !!}</p>
-                                </div>
-                            </div> --}}
-                          </div>
-                          <div class="carousel-item">
+                            @foreach($sliders as $key => $slide)
+                            <div class="{{ ($key == 0) ? 'carousel-item active' : 'carousel-item'}}" style="height: 100%;">
+                                <img style="min-height: 700px;" class="d-block w-100" src="{{ Storage::url($slide['thumbnail']) }}" alt="First slide">
+                            </div>
+                            @endforeach
+                          <!-- <div class="carousel-item">
                             <img style="min-height: 700px;" class="d-block w-100" src="images/topbanner-1.jpg" alt="Second slide">
                             {{-- <div class="carousel-caption d-none d-md-block" >
                                 <div style="display: inline-block;padding: 20px;padding-bottom: 0;border-radius: 5px;background-color: rgba(0,0,0,0.5);margin-bottom:20px;">
@@ -52,7 +48,7 @@
                                     <p class="text-white">{!! config('office_address') !!}</p>
                                 </div>
                             </div> --}}
-                          </div>
+                          </div> -->
                         </div>
 
                         <div class="col-lg-4 contact_form" style="position: absolute;top: 0;right: 0;background: rgba(0,123,255,0.5);height: 100%;padding-top:15px;padding-bottom:15px;">
@@ -99,5 +95,5 @@
             @include('pages.section.google_map')
         </div>
     </div>
-    @include('pages.section.clients')
+    <x-client-component/>
 @stop

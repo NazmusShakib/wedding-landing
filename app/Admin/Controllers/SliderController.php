@@ -27,16 +27,17 @@ class SliderController extends AdminController
         $grid = new Grid(new Slider());
         $grid->column('id', __('ID'))->sortable();
         $grid->column('short_title', __('Short Title'));
-        $grid->column('thumbnail_type')->display(function ($thumbnail_type, $column){
-            if($this->thumbnail_type == 0) {
+        $grid->column('thumbnail_type')->display(function ($thumbnail_type, $column) {
+            if ($this->thumbnail_type == 0) {
                 return 'Image';
-            }else{
+            } else {
                 return 'Video';
             }
         });
         $grid->column('title', __('Title'));
-        $grid->column('created_at', __('Created at'));
-        $grid->column('updated_at', __('Updated at'));
+        $grid->column('display_order', __('Display order'));
+        $grid->column('page', __('Page'));
+        $grid->column('is_published', __('Is published'));
         return $grid;
     }
 
@@ -63,16 +64,22 @@ class SliderController extends AdminController
     protected function form()
     {
         $form = new Form(new Slider());
-        $form->radio('thumbnail_type', 'Thumbnail')->options(['0' => 'Image', '1'=> 'Video'])
-        ->default('0');
+        $form->radio('thumbnail_type', 'Thumbnail')->options(['0' => 'Image', '1' => 'Video'])
+            ->default('0');
         $form->text('short_title', 'Short Title')->rules('max:25')->help('Ex. dream wedding');
         $form->text('title', 'Title')->rules('max:255')->help('Ex. To Know Us is to Love Us!');
         $form->textarea('description')->rules('max:255')->rows(5)
-        ->help('Ex. We would love to meet up and chat about how we can make YOUR DREAM wedding happen!');
+            ->help('Ex. We would love to meet up and chat about how we can make YOUR DREAM wedding happen!');
         $form->file('thumbnail')->rules('mimes:jpeg,jpg,mp4,avi')
             ->required()->uniqueName()->removable()->downloadable();
         $form->text('btn_title', 'Button Title')->rules('max:10');
         $form->url('btn_url', 'Button Url')->default('');
+        $form->select('page', 'Page')->options([
+            'home' => 'Home',
+            'contact_us' => 'Contact us',
+        ]);
+        $form->number('display_order',  __("Display Order"))->default(99999)->required();
+        $form->switch('is_published', __("Is Published"))->default(false);
         return $form;
     }
 }
