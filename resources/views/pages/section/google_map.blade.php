@@ -3,7 +3,7 @@
     <div class="row">
         <div class="col-md-12 animate-box" data-animate-effect="fadeInLeft">
             <iframe
-                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7301.985000416858!2d90.3918784!3d23.7832814!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755c7ffe09b983b%3A0xe8795910f7b3c97d!2sSketch%20Imagination!5e0!3m2!1sen!2suk!4v1679841147685!5m2!1sen!2suk"
+                src="{{ config('google_map_src') }}"
                 width="100%"
                 height="450"
                 style="border: 0"

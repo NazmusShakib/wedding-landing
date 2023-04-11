@@ -11,7 +11,7 @@ return [
     | login page.
     |
     */
-    'name' => 'Sketch Imagination',
+    'name' => env('APP_NAME', 'Sketch Imagination'),
 
     /*
     |--------------------------------------------------------------------------
@@ -22,7 +22,7 @@ return [
     | `img` tag, eg '<img src="http://logo-url" alt="Admin logo">'.
     |
     */
-    'logo' => '<b>S</b>Ketch <b>I</b>magination',
+    'logo' => env('ADMIN_LOGO_TITLE', '<b>S</b>Ketch <b>I</b>magination'),
 
     /*
     |--------------------------------------------------------------------------
