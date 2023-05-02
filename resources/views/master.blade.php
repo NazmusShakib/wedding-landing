@@ -27,10 +27,7 @@
         <div id="pwe-page">
             <a href="#" class="js-pwe-nav-toggle pwe-nav-toggle"><i></i></a>
             <div class="mobile-top-logo">
-                <img
-                    src="{{ asset('images/sketch-logo-black.png') }}"
-                    alt="Logo"
-                />
+                <img src="{{ url(config('logo_secondary')) }}" alt="Logo" />
             </div>
 
             {{--
@@ -38,8 +35,7 @@
             --}} @include('layouts.sidebar')
 
             <div id="pwe-main">
-                @yield('body') @stack('custom-style')
-                @include('layouts.footer')
+                @yield('body') @stack('custom-style') @include('layouts.footer')
             </div>
             @include('layouts.footerScripts')
         </div>
