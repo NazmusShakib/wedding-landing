@@ -55,6 +55,7 @@
                         </div>
                     </div>
                 </div>
+                @if($loop->iteration == 6) @break @endif
             @endforeach
         </div>
     </div>
